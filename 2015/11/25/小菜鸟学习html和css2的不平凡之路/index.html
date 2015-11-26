@@ -29,7 +29,7 @@
     &amp;lt;meta charset=&quot;utf-8&quot;/&amp;gt; 这是编码格式哦，不写汉字就会乱码哦。
      &amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;
     &amp;lt;link rel=&quot;styleshe">
-<meta property="og:updated_time" content="2015-11-26T03:07:14.000Z">
+<meta property="og:updated_time" content="2015-11-26T06:45:23.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小菜鸟学习html和css2的不平凡之路">
 <meta name="twitter:description" content="我第一个接触的就是：html文档。
@@ -194,7 +194,7 @@ ga('send', 'pageview');
 <p>active：鼠标点击没有松开的样式。</p>
 <p>我在试过之后，就发现下划线太low，所以可以在css样式中写：</p>
 <pre><code>｛
-<span class="attribute">text-deoration</span>:none; 去除下划线
+    <span class="attribute">text-deoration</span>:none; 去除下划线
 ｝
 </code></pre><h2 id="6-img标签">6.img标签</h2><pre><code>&lt;<span class="tag">img</span> src=<span class="string">"路径"</span> alt=<span class="string">"内容替代属性"</span> title=<span class="string">"提示属性"</span> <span class="attribute">width</span>=<span class="string">""</span> <span class="attribute">height</span>=<span class="string">""</span> /&gt;
 </code></pre><h3 id="特别注意：">特别注意：</h3><p>它不仅是行级标签，他还是一个单标签！！！一般行级标签不可以设置宽高，but它可以，它可以！！！！！，太牛牛啦！</p>
@@ -212,7 +212,7 @@ ga('send', 'pageview');
 </code></pre><p>它的作用是强调，有斜体的作用。</p>
 <pre><code><span class="tag">&lt;<span class="title">strong</span>&gt;</span>强调<span class="tag">&lt;/<span class="title">strong</span>&gt;</span>
 </code></pre><p>它的作用是强调，有加粗的作用。</p>
-<h3 id="以上的一些标签有的有块级，行级之分。可以在css样式中：">以上的一些标签有的有块级，行级之分。可以在css样式中：</h3><pre><code>｛
+<h3 id="以上的一些标签有的有块级，行级之分。可以在css样式中转换：">以上的一些标签有的有块级，行级之分。可以在css样式中转换：</h3><pre><code>｛
 <span class="attribute">display</span>：<span class="value">block</span>；转为块级，这样之后就可以设置宽高了。
 ｝
 ｛
@@ -225,12 +225,69 @@ heigt:<span class="number">200</span>px;
 <span class="built_in">background</span>-<span class="built_in">color</span>:<span class="built_in">red</span>;
 ｝
 </code></pre><p>这在网页中就会显示宽100像素，高200像素，背景色为红色的长方形。</p>
-<p>其中<br><em>background</em><br>里面包含了很多属性：</p>
+<ul>
+<li><p>其中<br><em>background</em><br>里面包含了很多属性：</p>
+<p>1）background-color:red;背景色红色。</p>
+<p>2）background-image:url(“图片路径”)；引入一张图片。</p>
+<p>3）background-repeat:no-repeat 不平铺/repeat-x 图片沿X轴平铺/repeat-y 图片沿Y轴平铺; 是否平铺，怎样平铺图片。</p>
+<p>4）background-position:X Y;图片定位。</p>
+</li>
+</ul>
+<h3 id="注意注意:4）backgrond-position图片定位又有点小难啦～～">注意注意:4）backgrond-position图片定位又有点小难啦～～</h3><pre><code>｛
+    backgrond-position：<span class="keyword">left</span>/<span class="keyword">center</span>/<span class="keyword">right</span>(<span class="keyword">X</span>) top/<span class="keyword">center</span>/bottom(Y);
+｝
+</code></pre><p>X轴，Y轴对应不同的值.</p>
+<pre><code>｛
+    backgrond-<span class="attribute">position</span>：<span class="attribute">left</span>;
+｝
+</code></pre><p>如果只设一个值的话，X轴认识，Y轴不认识，Y为中心（center）；Y轴认识，X轴不认识，X为中心（center）</p>
+<p>但也可以设数字</p>
+<pre><code>｛
+    backgrond-<span class="attribute">position</span>：100<span class="function">px</span>(X) 200<span class="function">px</span>(Y);
+｝
+</code></pre><p>图片沿着X轴移动100像素，沿着Y轴移动200像素。</p>
+<pre><code> ｛
+    <span class="keyword">backgrond-position：100px;
+</span>｝
+</code></pre><p>图片沿着X轴移动100像素，沿着Y轴移动100像素。</p>
+<h3 id="分开来写又麻烦，所以符合写法诞生：">分开来写又麻烦，所以符合写法诞生：</h3><pre><code>｛
+    <span class="built_in">background</span>:<span class="built_in">background</span>-<span class="built_in">color</span> <span class="built_in">background</span>-<span class="built_in">image</span> <span class="built_in">background</span>-position <span class="built_in">background</span>-repeat;
+｝
+</code></pre><p>例子：</p>
+<pre><code>｛
+    <span class="attribute">background</span><span class="value">:red <span class="function">url</span>(<span class="string">"图片路径"</span>) <span class="number">100px</span> <span class="number">200px</span> no-repeat;</span>
+｝
+</code></pre><h2 id="2-border边框">2.border边框</h2><p>1）边框样式：border-style</p>
+<pre><code><span class="rules">{
+    <span class="rule"><span class="attribute">border-style</span>:<span class="value">solid实线/dotted点状线/dashed虚线；
+</span></span></span>}
+</code></pre><p>2）边框颜色：border-color</p>
+<pre><code><span class="rules">{
+    <span class="rule"><span class="attribute">border-color</span>:<span class="value">#
+</span></span></span>}
+</code></pre><ul>
+<li>它有默认的颜色，默认是字体颜色，字体的默认颜色为黑色。</li>
+</ul>
+<p>3）边框宽度：border-width</p>
+<pre><code><span class="rules">{
+    <span class="rule"><span class="attribute">border-width</span>:<span class="value">#
+</span></span></span>}
+</code></pre><ul>
+<li>它有默认的宽度3px，数值不能为负数。</li>
+</ul>
+<h3 id="分开来写又麻烦，所以符合写法诞生：-1">分开来写又麻烦，所以符合写法诞生：</h3><pre><code>｛
+    <span class="attribute">border</span>:width color style;
+｝
+</code></pre><p>例子：</p>
+<pre><code>｛
+    <span class="attribute">border</span>:<span class="number">1px</span> red solid;
+｝
+</code></pre><p>这就是一个宽度为1像素，颜色为红色，实线的边框。☺</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/25/小菜鸟学习html和css2的不平凡之路/" data-id="cihfntoj20002d9fiuwp3wqjl" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/25/小菜鸟学习html和css2的不平凡之路/" data-id="cihfvlzd00002hhfi60oylm1s" class="article-share-link">Share</a>
       
       
     </footer>
