@@ -29,7 +29,7 @@
     &amp;lt;meta charset=&quot;utf-8&quot;/&amp;gt; 这是编码格式哦，不写汉字就会乱码哦。
      &amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;
     &amp;lt;link rel=&quot;styleshe">
-<meta property="og:updated_time" content="2015-11-26T06:45:23.000Z">
+<meta property="og:updated_time" content="2015-11-26T06:55:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小菜鸟学习html和css2的不平凡之路">
 <meta name="twitter:description" content="我第一个接触的就是：html文档。
@@ -194,7 +194,7 @@ ga('send', 'pageview');
 <p>active：鼠标点击没有松开的样式。</p>
 <p>我在试过之后，就发现下划线太low，所以可以在css样式中写：</p>
 <pre><code>｛
-    <span class="attribute">text-deoration</span>:none; 去除下划线
+    <span class="attribute">text-decoration</span>:none; 去除下划线
 ｝
 </code></pre><h2 id="6-img标签">6.img标签</h2><pre><code>&lt;<span class="tag">img</span> src=<span class="string">"路径"</span> alt=<span class="string">"内容替代属性"</span> title=<span class="string">"提示属性"</span> <span class="attribute">width</span>=<span class="string">""</span> <span class="attribute">height</span>=<span class="string">""</span> /&gt;
 </code></pre><h3 id="特别注意：">特别注意：</h3><p>它不仅是行级标签，他还是一个单标签！！！一般行级标签不可以设置宽高，but它可以，它可以！！！！！，太牛牛啦！</p>
@@ -213,37 +213,34 @@ ga('send', 'pageview');
 <pre><code><span class="tag">&lt;<span class="title">strong</span>&gt;</span>强调<span class="tag">&lt;/<span class="title">strong</span>&gt;</span>
 </code></pre><p>它的作用是强调，有加粗的作用。</p>
 <h3 id="以上的一些标签有的有块级，行级之分。可以在css样式中转换：">以上的一些标签有的有块级，行级之分。可以在css样式中转换：</h3><pre><code>｛
-<span class="attribute">display</span>：<span class="value">block</span>；转为块级，这样之后就可以设置宽高了。
+    <span class="attribute">display</span>：<span class="value">block</span>；转为块级，这样之后就可以设置宽高了。
 ｝
 ｛
-<span class="attribute">display</span>：<span class="value">inline</span>；转为行级；
+    <span class="attribute">display</span>：<span class="value">inline</span>；转为行级；
 ｝
 </code></pre><p>以上就是一些html中常用的标签。</p>
 <h2 id="下面就是css样式喽！">下面就是css样式喽！</h2><h2 id="1-宽高背景色">1.宽高背景色</h2><pre><code>｛
-<span class="variable">width</span>：<span class="number">100</span>px;
-heigt:<span class="number">200</span>px;
-<span class="built_in">background</span>-<span class="built_in">color</span>:<span class="built_in">red</span>;
+    <span class="variable">width</span>：<span class="number">100</span>px;
+    <span class="variable">height</span>:<span class="number">200</span>px;
+    <span class="built_in">background</span>-<span class="built_in">color</span>:<span class="built_in">red</span>;
 ｝
 </code></pre><p>这在网页中就会显示宽100像素，高200像素，背景色为红色的长方形。</p>
-<ul>
-<li><p>其中<br><em>background</em><br>里面包含了很多属性：</p>
-<p>1）background-color:red;背景色红色。</p>
-<p>2）background-image:url(“图片路径”)；引入一张图片。</p>
-<p>3）background-repeat:no-repeat 不平铺/repeat-x 图片沿X轴平铺/repeat-y 图片沿Y轴平铺; 是否平铺，怎样平铺图片。</p>
-<p>4）background-position:X Y;图片定位。</p>
-</li>
-</ul>
-<h3 id="注意注意:4）backgrond-position图片定位又有点小难啦～～">注意注意:4）backgrond-position图片定位又有点小难啦～～</h3><pre><code>｛
-    backgrond-position：<span class="keyword">left</span>/<span class="keyword">center</span>/<span class="keyword">right</span>(<span class="keyword">X</span>) top/<span class="keyword">center</span>/bottom(Y);
+<p><strong>其中background里面包含了很多属性：</strong></p>
+<p> 1）background-color:red;背景色红色。</p>
+<p> 2）background-image:url(“图片路径”)；引入一张图片。</p>
+<p> 3）background-repeat:no-repeat 不平铺/repeat-x 图片沿X轴平铺/repeat-y 图片沿Y轴平铺; 是否平铺，怎样平铺图片。</p>
+<p> 4）background-position:X Y;图片定位。</p>
+<h3 id="注意注意:4）background-position图片定位又有点小难啦～～">注意注意:4）background-position图片定位又有点小难啦～～</h3><pre><code>｛
+    background-position：<span class="keyword">left</span>/<span class="keyword">center</span>/<span class="keyword">right</span>(<span class="keyword">X</span>)    top/<span class="keyword">center</span>/bottom(Y);
 ｝
 </code></pre><p>X轴，Y轴对应不同的值.</p>
 <pre><code>｛
-    backgrond-<span class="attribute">position</span>：<span class="attribute">left</span>;
+    <span class="attribute">background-position</span>：<span class="attribute">left</span>;
 ｝
 </code></pre><p>如果只设一个值的话，X轴认识，Y轴不认识，Y为中心（center）；Y轴认识，X轴不认识，X为中心（center）</p>
 <p>但也可以设数字</p>
 <pre><code>｛
-    backgrond-<span class="attribute">position</span>：100<span class="function">px</span>(X) 200<span class="function">px</span>(Y);
+    <span class="attribute">background-position</span>：100<span class="function">px</span>(X) 200<span class="function">px</span>(Y);
 ｝
 </code></pre><p>图片沿着X轴移动100像素，沿着Y轴移动200像素。</p>
 <pre><code> ｛
@@ -287,7 +284,7 @@ heigt:<span class="number">200</span>px;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/25/小菜鸟学习html和css2的不平凡之路/" data-id="cihfvlzd00002hhfi60oylm1s" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/25/小菜鸟学习html和css2的不平凡之路/" data-id="cihfvziko0002i0fihfcty1b5" class="article-share-link">Share</a>
       
       
     </footer>
