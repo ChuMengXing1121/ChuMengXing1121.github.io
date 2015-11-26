@@ -29,7 +29,7 @@
     &amp;lt;meta charset=&quot;utf-8&quot;/&amp;gt; 这是编码格式哦，不写汉字就会乱码哦。
      &amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;
     &amp;lt;link rel=&quot;styleshe">
-<meta property="og:updated_time" content="2015-11-26T06:55:51.000Z">
+<meta property="og:updated_time" content="2015-11-26T07:35:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小菜鸟学习html和css2的不平凡之路">
 <meta name="twitter:description" content="我第一个接触的就是：html文档。
@@ -248,7 +248,7 @@ ga('send', 'pageview');
 </span>｝
 </code></pre><p>图片沿着X轴移动100像素，沿着Y轴移动100像素。</p>
 <h3 id="分开来写又麻烦，所以符合写法诞生：">分开来写又麻烦，所以符合写法诞生：</h3><pre><code>｛
-    <span class="built_in">background</span>:<span class="built_in">background</span>-<span class="built_in">color</span> <span class="built_in">background</span>-<span class="built_in">image</span> <span class="built_in">background</span>-position <span class="built_in">background</span>-repeat;
+    <span class="built_in">background</span>:<span class="built_in">background</span>-<span class="built_in">color</span>  <span class="built_in">background</span>-<span class="built_in">image</span>  <span class="built_in">background</span>-position  <span class="built_in">background</span>-repeat;
 ｝
 </code></pre><p>例子：</p>
 <pre><code>｛
@@ -256,7 +256,7 @@ ga('send', 'pageview');
 ｝
 </code></pre><h2 id="2-border边框">2.border边框</h2><p>1）边框样式：border-style</p>
 <pre><code><span class="rules">{
-    <span class="rule"><span class="attribute">border-style</span>:<span class="value">solid实线/dotted点状线/dashed虚线；
+    <span class="rule"><span class="attribute">border-style</span>:<span class="value">solid实线/ dotted点状线 /dashed虚线；
 </span></span></span>}
 </code></pre><p>2）边框颜色：border-color</p>
 <pre><code><span class="rules">{
@@ -280,11 +280,23 @@ ga('send', 'pageview');
     <span class="attribute">border</span>:<span class="number">1px</span> red solid;
 ｝
 </code></pre><p>这就是一个宽度为1像素，颜色为红色，实线的边框。☺</p>
-
+<h2 id="3-padding内边距">3.padding内边距</h2><pre><code>{
+    padding-top:<span class="number">20</span>px; 距离上边框<span class="number">20</span>像素。
+    padding-bottom:<span class="number">30</span>px; 距离下边框<span class="number">30</span>像素。
+    padding-left:<span class="number">40</span>px; 距离左边框<span class="number">40</span>像素。
+    padding-right:<span class="number">50</span>px; 距离右边框<span class="number">50</span>像素。
+}
+</code></pre><h3 id="它也有符合写法">它也有符合写法</h3><pre><code>｛
+    padding:<span class="number">20</span>px; 距离上下左右边框都是<span class="number">20</span>像素。
+    padding:<span class="number">20</span>px(上下) <span class="number">30</span>px（左右）;距离上下边框<span class="number">20</span>像素，左右边框<span class="number">30</span>像素。
+    padding:<span class="number">20</span>px（上） <span class="number">30</span>px（左右） <span class="number">40</span>px（下）;距离上边框<span class="number">20</span>像素，左右边框<span class="number">30</span>像素，;距离下边框<span class="number">40</span>像素。
+    padding:<span class="number">20</span>px(上) <span class="number">30</span>px（右） <span class="number">40</span>px（下） <span class="number">50</span>px（左）;距离上边框<span class="number">20</span>像素，右边框<span class="number">30</span>像素，下边框<span class="number">40</span>像素，左边框<span class="number">50</span>像素。 【TRBL法则！！！】
+    ｝
+</code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/25/小菜鸟学习html和css2的不平凡之路/" data-id="cihfvziko0002i0fihfcty1b5" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/25/小菜鸟学习html和css2的不平凡之路/" data-id="cihfxe6o60002iofis68c0qml" class="article-share-link">Share</a>
       
       
     </footer>
