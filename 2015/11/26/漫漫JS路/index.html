@@ -6,21 +6,18 @@
   <title>漫漫JS路 | 小褚的梦想星世界</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="两个礼拜前开始学习javascript，内心是害怕的，但我是绝不会放弃的，再难也不。吼吼～
-javascript！一.如何在html中引入javascript1)可以在html文档头部中引入（不推荐，html文档是从上向下读取，从头部引入的话会有阻碍，所以不使用这种引入。）
-2)">
+javascript！">
 <meta property="og:type" content="article">
 <meta property="og:title" content="漫漫JS路">
 <meta property="og:url" content="http://yoursite.com/2015/11/26/漫漫JS路/index.html">
 <meta property="og:site_name" content="小褚的梦想星世界">
 <meta property="og:description" content="两个礼拜前开始学习javascript，内心是害怕的，但我是绝不会放弃的，再难也不。吼吼～
-javascript！一.如何在html中引入javascript1)可以在html文档头部中引入（不推荐，html文档是从上向下读取，从头部引入的话会有阻碍，所以不使用这种引入。）
-2)">
-<meta property="og:updated_time" content="2015-11-26T12:28:07.000Z">
+javascript！">
+<meta property="og:updated_time" content="2015-11-26T13:35:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="漫漫JS路">
 <meta name="twitter:description" content="两个礼拜前开始学习javascript，内心是害怕的，但我是绝不会放弃的，再难也不。吼吼～
-javascript！一.如何在html中引入javascript1)可以在html文档头部中引入（不推荐，html文档是从上向下读取，从头部引入的话会有阻碍，所以不使用这种引入。）
-2)">
+javascript！">
 <meta name="twitter:creator" content="@coolwuxing">
   
     <link rel="alternative" href="/atom.xml" title="小褚的梦想星世界" type="application/atom+xml">
@@ -112,13 +109,59 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
         <p>两个礼拜前开始学习javascript，内心是害怕的，但我是绝不会放弃的，再难也不。吼吼～</p>
-<h1 id="javascript！">javascript！</h1><h2 id="一-如何在html中引入javascript">一.如何在html中引入javascript</h2><p>1)可以在html文档头部中引入（不推荐，html文档是从上向下读取，从头部引入的话会有阻碍，所以不使用这种引入。）</p>
-<p>2)</p>
+<h1 id="javascript！">javascript！</h1><a id="more"></a>
+<h2 id="一-如何在html中引入javascript">一.如何在html中引入javascript</h2><p>1)可以在html文档头部中引入（不推荐，html文档是从上向下读取，从头部引入的话会有阻碍，所以不使用这种引入。）</p>
+<p>2)在body中引入:</p>
+<pre><code><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/Javascript"</span> <span class="attribute">src</span>=<span class="value">"路径"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+</code></pre><h2 id="二-声明变量">二.声明变量</h2><p>var  变量名 ＝ 你要保存的数据</p>
+<p>1)什么是变量？保存数据或者信息用的</p>
+<p>2)声明变量，没有初始化它的值，那么该变量的默认值为undefined</p>
+<p>3)变量是有作用域的，var声明的变量叫局部变量，只有在当前环境和相对内部内部环境里调用。没有var的是全局变量，可以在任意位置调用。</p>
+<p>4)变量名采用驼峰式命名:DreamStar</p>
+<p>例1.</p>
+<pre><code><span class="keyword">var</span> DreamStar = <span class="built_in">document</span>.<span class="built_in">querySelector</span>(<span class="string">"div"</span>);获取一个div
+</code></pre><p>例2.</p>
+<pre><code><span class="keyword">var</span> DreamStar = <span class="built_in">document</span>.<span class="built_in">querySelectorAll</span>(<span class="string">"div"</span>);获取多个div
+</code></pre><h2 id="三-javascript的数据类型">三.javascript的数据类型</h2><h3 id="五种基础类型">五种基础类型</h3><p>1)String 字符串类型</p>
+<p>2)Boolean 布尔类型</p>
+<p>3)Number 数值类型</p>
+<p>4)Null 空类型</p>
+<p>5)Undefined 空类型 未定义</p>
+<h3 id="一种复杂类型">一种复杂类型</h3><p>1)Object 对象类型或空</p>
+<p><strong>数据类型是为了方便我们知道变量保存的是什么东西</strong></p>
+<h2 id="四-运算符">四.运算符</h2><h3 id="1)一元运算符_+-*/%">1)一元运算符 +-*/%</h3><pre><code><span class="comment">num</span> <span class="literal">+</span><span class="literal">+</span><span class="comment">;后置递增（下一次生效）</span>
+<span class="literal">+</span><span class="literal">+</span> <span class="comment">num;前置递增（立即生效）</span>
+</code></pre><p><strong>减法会把字符串换成相应的数值，再想减</strong></p>
+<p>例子:</p>
+<pre><code><span class="variable"><span class="keyword">var</span> num1</span> = <span class="string">"123"</span>;
+<span class="variable"><span class="keyword">var</span> num2</span> = <span class="number">100</span>;
+<span class="variable"><span class="keyword">var</span> num3</span> = num1 - num2;
+
+结果等于<span class="number">23</span>
+</code></pre><h3 id="2)逻辑与&amp;&amp;">2)逻辑与&amp;&amp;</h3><p>两个条件都同时成立的情况下“逻辑与”的运算结果才为“真”</p>
+<p>例1:</p>
+<pre><code><span class="literal">false</span>&amp;&amp;<span class="literal">true</span>→<span class="literal">false</span>;
+首先是判断第一个条件，当判断出为<span class="literal">false</span>时，程序立即终止，因为不管第二个条件是什么，结果一定为<span class="literal">false</span>
+</code></pre><h3 id="3)逻辑或||">3)逻辑或||</h3><p>如果一个操作数或多个操作数为 true，则逻辑或运算符返回布尔值 true；只有全部操作数为false，结果才是 false</p>
+<p>例2:</p>
+<pre><code><span class="variable"><span class="keyword">var</span> a</span> = <span class="number">2</span>;
+
+<span class="variable"><span class="keyword">var</span> b</span> = <span class="number">3</span>;
+
+<span class="variable"><span class="keyword">var</span> num1</span> = a &amp;&amp; b ;
+
+<span class="variable"><span class="keyword">var</span> num2</span> = a || b ;
+
+num1 = <span class="number">3</span>,num2 = <span class="number">2</span>
+
+js会将&amp;&amp;和||两边的值转成<span class="typename">Boolean</span>类型，然后再算值，&amp;&amp;运算如果返回<span class="literal">true</span>，则取后面的值，如果||返回<span class="literal">true</span>，则取前面的值 
+</code></pre><h3 id="4)逻辑非！">4)逻辑非！</h3><p>返回布尔值，这个布尔值被求反过</p>
+<p>布尔值就两个:false和true</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/26/漫漫JS路/" data-id="cihg7xphx0001vtfito8tc6tl" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/26/漫漫JS路/" data-id="cihga9g4x0001xifir6lm4cgx" class="article-share-link">Share</a>
       
       
     </footer>
