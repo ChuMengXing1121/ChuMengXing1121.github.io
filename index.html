@@ -107,7 +107,7 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
         <p>我第一个接触的就是：html文档。</p>
-<h3 id="1-html文档格式：">1.html文档格式：</h3><pre><code><span class="doctype">&lt;!doctype html&gt;</span>
+<h2 id="1-html文档格式：">1.html文档格式：</h2><pre><code><span class="doctype">&lt;!doctype html&gt;</span>
 
     <span class="tag">&lt;<span class="title">html</span>&gt;</span>
 
@@ -126,20 +126,85 @@ ga('send', 'pageview');
 <span class="tag">&lt;/<span class="title">html</span>&gt;</span>
 </code></pre><p>可以用sublime text写写。</p>
 <p>后来又学习了一些标签，他们都写在body里，写在可视区域。</p>
-<h3 id="2-div标签">2.div标签</h3><p>html中：</p>
+<h2 id="2-div标签">2.div标签</h2><p>html中：</p>
 <pre><code><span class="tag">&lt;div&gt;</span> <span class="tag">&lt;/div&gt;</span>
-</code></pre><p>css样式中：</p>
+</code></pre><p>它是双标签，是块级标签，是一个区域。</p>
+<p><strong>像这种一头一尾都一样的，只是尾部的里面多了个/，它们叫双标签～～～</strong></p>
+<p>css样式中：</p>
 <pre><code><span class="rules">{
 <span class="rule"><span class="attribute">width</span>:<span class="value"><span class="number">500px</span></span></span>;
-<span class="rule"><span class="attribute">height</span>:<span class="value"><span class="number">500px</span></span></span>;
+<span class="rule"><span class="attribute">height</span>:<span class="value"><span class="number">600px</span></span></span>;
 <span class="rule"><span class="attribute">background-color</span>:<span class="value">pink</span></span>;
 }</span>
-</code></pre><p>它是块级标签，是一个区域。在css样式中设置高500px，宽500px，背景色为粉红。那网页中就会出现一个高500px，宽500px，背景色为粉红的正方形区域。</p>
+</code></pre><p>在css样式中设置高600px，宽500px，背景色为粉红。那网页中就会出现一个高600px，宽500px，背景色为粉红的长方形区域。（后面详解）</p>
+<h2 id="3-列表标签">3.列表标签</h2><pre><code><span class="tag">&lt;<span class="title">ol</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">li</span>&gt;</span>我是列表1<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">li</span>&gt;</span>我是列表2<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">ol</span>&gt;</span>
+</code></pre><p>这是有序排列，页面中会显示：</p>
+<p>1.我是列表1</p>
+<p>2.我是列表2 </p>
+<pre><code><span class="tag">&lt;<span class="title">ul</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">li</span>&gt;</span>我是列表1<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">li</span>&gt;</span>我是列表2<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+</code></pre><p>这是无序排列，页面中会显示：</p>
+<ul>
+<li><p>我是列表1</p>
+</li>
+<li><p>我是列表2 </p>
+</li>
+</ul>
+<p><em>注意：不管是有序列表或者无序列表，ol和li之间，ul和li之间不能设置其他标签元素，只能在li里面设置。</em></p>
+<h2 id="4-span标签">4.span标签</h2><pre><code><span class="tag">&lt;span&gt;</span><span class="tag">&lt;/span&gt;</span>
+</code></pre><p>它是双标签。 里面放置的文本内容无具体语意。</p>
+<p><em>注意哦：它是行级标签</em></p>
+<h2 id="5-a标签">5.a标签</h2><pre><code><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"网址地址"</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+</code></pre><p>它是一个锚点，就是常常在网页中看到的连接，<br><em>注意哦，它也是行级标签</em></p>
+<p>它比较复杂，为啥呢，因为它有四种状态：</p>
+<p>link：当前锚点没有访问过的样式，初始样式。</p>
+<p>visited：访问过后的样式。</p>
+<p>hover：鼠标悬浮在上面的样式。</p>
+<p>active：鼠标点击没有松开的样式。</p>
+<p>我在试过之后，就发现下划线太low，所以可以在css样式中写：</p>
+<pre><code>｛
+<span class="attribute">text-deoration</span>:none; 去除下划线
+｝
+</code></pre><h2 id="6-img标签">6.img标签</h2><pre><code>&lt;<span class="tag">img</span> src=<span class="string">"路径"</span> alt=<span class="string">"内容替代属性"</span> title=<span class="string">"提示属性"</span> <span class="attribute">width</span>=<span class="string">""</span> <span class="attribute">height</span>=<span class="string">""</span> /&gt;
+</code></pre><h3 id="特别注意：">特别注意：</h3><p>它不仅是行级标签，他还是一个单标签！！！一般行级标签不可以设置宽高，but它可以，它可以！！！！！，太牛牛啦！</p>
+<p>综上所述：4，5，6都是行级标签，现在就学了三个～</p>
+<h2 id="7-一些其他常用标签">7.一些其他常用标签</h2><pre><code><span class="tag">&lt;<span class="title">h1</span>&gt;</span>一级标签<span class="tag">&lt;/<span class="title">h1</span>&gt;</span> 
+<span class="tag">&lt;<span class="title">h2</span>&gt;</span>二级标签<span class="tag">&lt;/<span class="title">h2</span>&gt;</span> 
+<span class="tag">&lt;<span class="title">h3</span>&gt;</span>三级标签<span class="tag">&lt;/<span class="title">h3</span>&gt;</span> 
+<span class="tag">&lt;<span class="title">h4</span>&gt;</span>四级标签<span class="tag">&lt;/<span class="title">h4</span>&gt;</span> 
+<span class="tag">&lt;<span class="title">h5</span>&gt;</span>五级标签<span class="tag">&lt;/<span class="title">h5</span>&gt;</span> 
+<span class="tag">&lt;<span class="title">h6</span>&gt;</span>六级标签<span class="tag">&lt;/<span class="title">h6</span>&gt;</span> 
+</code></pre><p>字体样式从大到小依次变小，至于多大嘛，动动手操作一下喽。</p>
+<pre><code><span class="tag">&lt;<span class="title">p</span>&gt;</span>段落<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+</code></pre><p>它代表的是一个段落。</p>
+<pre><code><span class="tag">&lt;<span class="title">em</span>&gt;</span>强调<span class="tag">&lt;/<span class="title">em</span>&gt;</span>
+</code></pre><p>它的作用是强调，有斜体的作用。</p>
+<pre><code><span class="tag">&lt;<span class="title">strong</span>&gt;</span>强调<span class="tag">&lt;/<span class="title">strong</span>&gt;</span>
+</code></pre><p>它的作用是强调，有加粗的作用。</p>
+<h3 id="以上的一些标签有的有块级，行级之分。可以在css样式中：">以上的一些标签有的有块级，行级之分。可以在css样式中：</h3><pre><code>｛
+<span class="attribute">display</span>：<span class="value">block</span>；转为块级，这样之后就可以设置宽高了。
+｝
+｛
+<span class="attribute">display</span>：<span class="value">inline</span>；转为行级；
+｝
+</code></pre><p>以上就是一些html中常用的标签。</p>
+<h2 id="下面就是css样式喽！">下面就是css样式喽！</h2><h2 id="1-宽高背景色">1.宽高背景色</h2><pre><code>｛
+<span class="variable">width</span>：<span class="number">100</span>px;
+heigt:<span class="number">200</span>px;
+<span class="built_in">background</span>-<span class="built_in">color</span>:<span class="built_in">red</span>;
+｝
+</code></pre><p>这在网页中就会显示宽100像素，高200像素，背景色为红色的长方形。</p>
+<p>其中<br><em>background</em><br>里面包含了很多属性：</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/25/小菜鸟学习html和css2的不平凡之路/" data-id="cihev3d890002ujfivyo2z0cz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/25/小菜鸟学习html和css2的不平凡之路/" data-id="cihfntoj20002d9fiuwp3wqjl" class="article-share-link">Share</a>
       
       
     </footer>
@@ -177,7 +242,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/25/开山巨作/" data-id="cihev3d7x0001ujfi2lwi9snd" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/25/开山巨作/" data-id="cihfntoiz0001d9fi4emauo5m" class="article-share-link">Share</a>
       
       
     </footer>
@@ -222,7 +287,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/24/hello-world/" data-id="cihev3d7o0000ujfi3sae2t87" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/24/hello-world/" data-id="cihfntoif0000d9fiimr0j7ho" class="article-share-link">Share</a>
       
       
     </footer>
