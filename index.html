@@ -260,17 +260,96 @@ ga('send', 'pageview');
     padding-left:<span class="number">40</span>px; 距离左边框<span class="number">40</span>像素。
     padding-right:<span class="number">50</span>px; 距离右边框<span class="number">50</span>像素。
 }
-</code></pre><h3 id="它也有复合写法">它也有复合写法</h3><pre><code>｛
-    padding:<span class="number">20</span>px; 距离上下左右边框都是<span class="number">20</span>像素。
-    padding:<span class="number">20</span>px(上下) <span class="number">30</span>px（左右）;距离上下边框<span class="number">20</span>像素，左右边框<span class="number">30</span>像素。
-    padding:<span class="number">20</span>px（上） <span class="number">30</span>px（左右） <span class="number">40</span>px（下）;距离上边框<span class="number">20</span>像素，左右边框<span class="number">30</span>像素，;距离下边框<span class="number">40</span>像素。
-    padding:<span class="number">20</span>px(上) <span class="number">30</span>px（右） <span class="number">40</span>px（下） <span class="number">50</span>px（左）;距离上边框<span class="number">20</span>像素，右边框<span class="number">30</span>像素，下边框<span class="number">40</span>像素，左边框<span class="number">50</span>像素。 [TRBL法则！！！]
-    ｝
-</code></pre>
+</code></pre><h3 id="它也有复合写法">它也有复合写法</h3><p>例子1.</p>
+<pre><code><span class="rules">{
+    <span class="rule"><span class="attribute">padding</span>:<span class="value"><span class="number">20px</span></span></span>; 
+    }</span>
+</code></pre><ul>
+<li>距离上下左右边框都是20像素。</li>
+</ul>
+<p>例子2.    </p>
+<pre><code><span class="rules">{
+    <span class="rule"><span class="attribute">padding</span>:<span class="value"><span class="number">20px</span>(上下) <span class="number">30px</span>（左右）</span></span>;
+}</span>
+</code></pre><ul>
+<li>距离上下边框20像素，左右边框30像素。</li>
+</ul>
+<p>例子3.</p>
+<pre><code><span class="rules">{
+    <span class="rule"><span class="attribute">padding</span>:<span class="value"><span class="number">20px</span>（上） <span class="number">30px</span>（左右） <span class="number">40px</span>（下）</span></span>;
+}</span>
+</code></pre><ul>
+<li>距离上边框20像素，左右边框30像素，;距离下边框40像素。</li>
+</ul>
+<p>例子4.</p>
+<pre><code>{
+    padding:<span class="number">20</span>px(上) <span class="number">30</span>px（右） <span class="number">40</span>px（下） <span class="number">50</span>px（左）;
+}
+</code></pre><ul>
+<li>距离上边框20像素，右边框30像素，下边框40像素，左边框50像素。 [TRBL法则！！！]</li>
+</ul>
+<h2 id="4-margin外边距">4.margin外边距</h2><p>它的用法和padding相似，但两者又有差别。</p>
+<h3 id="padding和margin之差别">padding和margin之差别</h3><p>1）padding不可以为负数，但是margin可以。</p>
+<p>2）假设有一个宽200像素，高200像素的粉红色正方形。另外一个宽100像素，高100像素的黑红色正方形，如何让黑色正方形在粉红色正方形的中间。</p>
+<ul>
+<li><p>用margin做:</p>
+<pre><code><span class="class">.box1</span><span class="rules">{
+    <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">200px</span></span></span>;
+    <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">200px</span></span></span>;
+    <span class="rule"><span class="attribute">background-color</span>:<span class="value">pink</span></span>;
+    <span class="rule"><span class="attribute">margin</span>:<span class="value"><span class="number">50px</span> <span class="number">0px</span> <span class="number">0px</span> <span class="number">50px</span></span></span>;
+    <span class="rule"><span class="attribute">overflow</span>:<span class="value">hidden</span></span>;
+}</span>
+<span class="class">.box2</span><span class="rules">{
+    <span class="rule"><span class="attribute">width</span>:<span class="value"><span class="number">100px</span></span></span>;
+    <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">100px</span></span></span>;
+    <span class="rule"><span class="attribute">background-color</span>:<span class="value"> black</span></span>;
+}</span>
+</code></pre></li>
+<li><p>用padding做:</p>
+<pre><code><span class="class">.box1</span><span class="rules">{
+    <span class="rule"><span class="attribute">width</span>:<span class="value"><span class="number">150px</span></span></span>;
+    <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">150px</span></span></span>;
+    <span class="rule"><span class="attribute">background-color</span>:<span class="value"> pink</span></span>;
+    <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">50px</span> <span class="number">0px</span> <span class="number">0px</span> <span class="number">50px</span></span></span>;
+}</span>
+<span class="class">.box2</span><span class="rules">{
+    <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">100px</span></span></span>;
+    <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">100px</span></span></span>;
+    <span class="rule"><span class="attribute">background-color</span>:<span class="value"> black</span></span>;
+}</span>
+</code></pre></li>
+</ul>
+<h3 id="注意注意:box1是父级，box2是子级，如果用padding方法在box1里面设置的话，要减去padding的像素。">注意注意:box1是父级，box2是子级，如果用padding方法在box1里面设置的话，要减去padding的像素。</h3><h2 id="选择器来啦～">选择器来啦～</h2><p>现在会写一些样式，但是如果写很多个div，会不知道如何命名，不方便设置各自的样式，所以选择器is coming</p>
+<p>1)标签选择器:直接作用于选择的标签元素，是一个集合</p>
+<pre><code><span class="keyword">div</span>{
+
+}
+</code></pre><p>2)id选择器:直接作用于叫该名称的标签元素，名称是唯一的，标签也是唯一的，只对该名称标签有效</p>
+<pre><code><span class="id">#star</span><span class="rules">{
+
+}</span>
+
+<span class="id">#dream</span><span class="rules">{
+
+}</span>
+</code></pre><p>3)父子选择器:按层级来，中间空格</p>
+<pre><code><span class="tag">body</span> div
+</code></pre><p>4)类选择器（class选择器）:可以重命名，id不可以</p>
+<pre><code><span class="class">.star</span><span class="rules">{
+
+}</span>
+</code></pre><p>5)群组选择器:无顺序,同时选中</p>
+<pre><code><span class="tag">div</span>,<span class="tag">h1</span>,a
+</code></pre><p>6)通配选择器:</p>
+<pre><code><span class="strong">*{
+
+</span>}
+</code></pre><h3 id="选择器优先级关系:id&gt;类&gt;标签&gt;*">选择器优先级关系:id&gt;类&gt;标签&gt;*</h3>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/25/小菜鸟学习html和css2的不平凡之路/" data-id="cihfxm9ck0002j5fisvqzu6ax" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/25/小菜鸟学习html和css2的不平凡之路/" data-id="cihfzvzan0002knfitzkzcd3q" class="article-share-link">Share</a>
       
       
     </footer>
@@ -308,7 +387,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/25/开山巨作/" data-id="cihfxm9c90001j5fi6zsx8n0o" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/25/开山巨作/" data-id="cihfzvzae0001knfiutqkrteu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -353,7 +432,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/24/hello-world/" data-id="cihfxm9by0000j5fioy1zond4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/24/hello-world/" data-id="cihfzvza50000knfipk0jbrxn" class="article-share-link">Share</a>
       
       
     </footer>
