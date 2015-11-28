@@ -13,7 +13,7 @@ JS预解析">
 <meta property="og:site_name" content="小褚的梦想星世界">
 <meta property="og:description" content="今天又学了新知识，很开心，希望自己每天多懂一点点，多多积累。今天呢学习的就是js的预解析啦～
 JS预解析">
-<meta property="og:updated_time" content="2015-11-27T13:52:16.000Z">
+<meta property="og:updated_time" content="2015-11-28T01:08:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS之预解析">
 <meta name="twitter:description" content="今天又学了新知识，很开心，希望自己每天多懂一点点，多多积累。今天呢学习的就是js的预解析啦～
@@ -112,23 +112,23 @@ ga('send', 'pageview');
 <h2 id="JS预解析">JS预解析</h2><a id="more"></a>
 <p>什么是预解析呢？就是浏览器的准备工作，把变量，函数表达式的声明提到当前作用域的顶端。</p>
 <p>例1.</p>
-<pre><code><span class="function"><span class="keyword">function</span> <span class="title">t2</span><span class="params">()</span><span class="comment">{
+<pre><code><span class="function"><span class="keyword">function</span> <span class="title">t2</span><span class="params">()</span> <span class="comment">{
 
-console.log(a);
+    console.log(a);
 
-var a = 30;
+    var a = 30;
 
-    }</span><span class="title">t2</span><span class="params">()</span>;</span>
-</code></pre><p> 这里的var是声明的局部变量，所以预解析就会变成：</p>
+}</span> <span class="title">t2</span><span class="params">()</span>;</span>
+</code></pre><p> 这里的var是声明的局部变量，所以预解析就会变成:</p>
 <pre><code> <span class="function"><span class="keyword">function</span> <span class="title">t2</span><span class="params">()</span><span class="comment">{
 
-var a,
+    var a,
 
-console.log(a);
+    console.log(a);
 
-a = 30;
+    a = 30;
 
-    }</span><span class="title">t2</span><span class="params">()</span>;</span>
+}</span> <span class="title">t2</span><span class="params">()</span>;</span>
 </code></pre><p>先把声明提到当前作用域的顶端，这里的声明就是声明变量a,在js中是从上到下解析的，在这里我们声明了a，但是却没有给a赋值，所以console.log(a)的值为undefined</p>
 <hr>
 <p>例2.</p>
@@ -136,24 +136,32 @@ a = 30;
 
 
 }</span>
+
 console.<span class="built_in">log</span>(<span class="built_in">i</span>)
 </code></pre><p>这是一个for循环语句，它的预解析是：</p>
 <pre><code>var <span class="built_in">i</span> 
-<span class="keyword">for</span>(<span class="built_in">i</span> = <span class="number">0</span>;<span class="built_in">i</span>&lt;<span class="number">5</span>;<span class="built_in">i</span>++)<span class="cell">{
+
+<span class="keyword">for</span>(<span class="built_in">i</span> = <span class="number">0</span>; <span class="built_in">i</span> &lt; <span class="number">5</span> ; <span class="built_in">i</span>++)<span class="cell">{
+
     console.log(i)
 
 }</span>
 </code></pre><p><strong>注意注意！for循环语句和if判断语句里定义的是全局作用域！！！只有函数里可以定义局部作用域</strong><br>因为它是全局作用域，函数内部也可以访问到，所以console.iog(i)的值为0，1，2，3，4</p>
 <p>例3.</p>
 <pre><code>var <span class="built_in">i</span> = dream;
+
 (<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
+
     console.<span class="built_in">log</span>(<span class="built_in">i</span>)
+
     var <span class="built_in">i</span> =star
 
 })()
 </code></pre><p>这是一个匿名函数变成函数表达式，那预解析为:</p>
 <pre><code>var <span class="built_in">i</span> = dream;
+
 (<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
+
     var <span class="built_in">i</span>
 
     console.<span class="built_in">log</span>(<span class="built_in">i</span>)
@@ -166,7 +174,7 @@ console.<span class="built_in">log</span>(<span class="built_in">i</span>)
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/27/JS之预解析/" data-id="cihhqal430000pifi3m7xfl9i" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/27/JS之预解析/" data-id="cihiegs0g0000axfisoh6x8lx" class="article-share-link">Share</a>
       
       
     </footer>
