@@ -13,7 +13,7 @@ JS预解析">
 <meta property="og:site_name" content="小褚的梦想星世界">
 <meta property="og:description" content="今天又学了新知识，很开心，希望自己每天多懂一点点，多多积累。今天呢学习的就是js的预解析啦～
 JS预解析">
-<meta property="og:updated_time" content="2015-11-28T01:08:24.000Z">
+<meta property="og:updated_time" content="2015-11-28T01:13:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS之预解析">
 <meta name="twitter:description" content="今天又学了新知识，很开心，希望自己每天多懂一点点，多多积累。今天呢学习的就是js的预解析啦～
@@ -129,7 +129,7 @@ ga('send', 'pageview');
     a = 30;
 
 }</span> <span class="title">t2</span><span class="params">()</span>;</span>
-</code></pre><p>先把声明提到当前作用域的顶端，这里的声明就是声明变量a,在js中是从上到下解析的，在这里我们声明了a，但是却没有给a赋值，所以console.log(a)的值为undefined</p>
+</code></pre><p>这一个函数表达式，它是局部作用域,把变量a提到当前局部作用域的顶端，在js中是从上到下解析的，在这里我们声明了a，但是却没有给a赋值，所以console.log(a)的值为undefined</p>
 <hr>
 <p>例2.</p>
 <pre><code><span class="keyword">for</span>(var <span class="built_in">i</span> = <span class="number">0</span>;<span class="built_in">i</span>&lt;<span class="number">5</span>;<span class="built_in">i</span>++)<span class="cell">{
@@ -174,7 +174,7 @@ console.<span class="built_in">log</span>(<span class="built_in">i</span>)
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/27/JS之预解析/" data-id="cihiegs0g0000axfisoh6x8lx" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/27/JS之预解析/" data-id="cihienc7o0000bhfiq57dxieb" class="article-share-link">Share</a>
       
       
     </footer>
