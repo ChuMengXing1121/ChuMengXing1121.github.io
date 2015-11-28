@@ -13,7 +13,7 @@ JS预解析">
 <meta property="og:site_name" content="小褚的梦想星世界">
 <meta property="og:description" content="今天又学了新知识，很开心，希望自己每天多懂一点点，多多积累。今天呢学习的就是js的预解析啦～
 JS预解析">
-<meta property="og:updated_time" content="2015-11-28T01:13:32.000Z">
+<meta property="og:updated_time" content="2015-11-28T01:19:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS之预解析">
 <meta name="twitter:description" content="今天又学了新知识，很开心，希望自己每天多懂一点点，多多积累。今天呢学习的就是js的预解析啦～
@@ -147,6 +147,7 @@ console.<span class="built_in">log</span>(<span class="built_in">i</span>)
 
 }</span>
 </code></pre><p><strong>注意注意！for循环语句和if判断语句里定义的是全局作用域！！！只有函数里可以定义局部作用域</strong><br>因为它是全局作用域，函数内部也可以访问到，所以console.iog(i)的值为0，1，2，3，4</p>
+<hr>
 <p>例3.</p>
 <pre><code>var <span class="built_in">i</span> = dream;
 
@@ -170,11 +171,14 @@ console.<span class="built_in">log</span>(<span class="built_in">i</span>)
 
 })()
 </code></pre><p>函数表达式里是局部作用域，所以局部里的声明提到当前作用域的顶端，此时console.log(i)的值还是为undefined，因为能找到i但是没有给i赋值</p>
+<ul>
+<li>把匿名函数变为函数表达式:（）（）两个括号，第一个括号放匿名函数，作用是把匿名函数转化为函数表达式。第二个括号就是立即执行，参照例3</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/27/JS之预解析/" data-id="cihienc7o0000bhfiq57dxieb" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/27/JS之预解析/" data-id="cihieu8bg0000bsfibr1na784" class="article-share-link">Share</a>
       
       
     </footer>
