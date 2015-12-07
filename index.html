@@ -84,6 +84,87 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main">
   
+    <article id="post-JS之字符串操作" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/12/07/JS之字符串操作/" class="article-date">
+  <time datetime="2015-12-07T11:20:00.000Z" itemprop="datePublished">2015-12-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/07/JS之字符串操作/">JS之字符串操作</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>好久没更新啦，怕自己越来越懒，所以逼自己来更新啦，也不知道有没有人看，不过没关系啦，以后可以回顾回顾☺</p>
+<h2 id="字符串操作">字符串操作</h2><h3 id="1-indexOf(_)">1.indexOf( )</h3><p>查找字符,返回字符下标数字,可以取两个值，indexOf（’x’,y）,x是必须的，是需要查找的字符;y是可有可无的，是从第几个开始找,y的初始值为0;如果x查不到则返回-1</p>
+<p>例1:只有x时</p>
+<pre><code>var <span class="keyword">str</span> = <span class="string">"hello world"</span>;
+document.write(<span class="keyword">str</span>.indexOf(<span class="string">'o'</span>))<span class="comment">//此时返回的值是4，从开始字母h开始，h为0，依次推算，字母o就为4.</span>
+</code></pre><p>例2:有x,y时</p>
+<pre><code>var <span class="keyword">str</span> = <span class="string">"hello world"</span>;
+document.write(<span class="keyword">str</span>.indexOf(<span class="string">'o'</span>,<span class="number">6</span>))<span class="comment">//此时返回的值是7，从起始位置为6的字母w开始找，找到world里的o，返回下标数字7.</span>
+</code></pre><h3 id="2-lastIndexOf(_)">2.lastIndexOf( )</h3><p>查找最后一个需要查找的字符，返回下标数字，可以取两个值，lastIndexOf(‘x’,y),x是必须的，是需要查找的字符;y是可有可无的，y是查找到第几个结束，y的初始值为0</p>
+<p>例1:只有x时</p>
+<pre><code>var <span class="keyword">str</span> = <span class="string">"hello world"</span>;
+document.write(<span class="keyword">str</span>.lastIndexOf(<span class="string">'l'</span>))<span class="comment">//此时返回的值是9,最后一个l是world里的l，所以返回9.</span>
+</code></pre><p>例2:有x,y时</p>
+<pre><code>var <span class="keyword">str</span> = <span class="string">"hello world"</span>;
+document.write(<span class="keyword">str</span>.lastIndexOf(<span class="string">'l'</span>,<span class="number">4</span>))<span class="comment">//此时返回的值是3，因为y值为4，选中的字符串就为hello,在hello中最后一个l的下标数字就为3.</span>
+</code></pre><h3 id="3-slice(_)">3.slice( )</h3><p>提取字符串的某个部分，并以新的字符串返回，可以取两个值，slice(x,y),x值为起始位置，y为结束位置，x位置的值被提取，y位置的值不被提取</p>
+<p>例1:只有x时</p>
+<pre><code>var <span class="keyword">str</span> = <span class="string">"hello world"</span>;
+document.write(<span class="keyword">str</span>.slice(<span class="number">4</span>))<span class="comment">//返回的值是o world,下标数字为4的o被提取出来了</span>
+</code></pre><p>例2:有x,y时</p>
+<pre><code>var <span class="keyword">str</span> = <span class="string">"hello world"</span>;
+document.write(<span class="keyword">str</span>.slice(<span class="number">3</span>,<span class="number">7</span>))<span class="comment">//返回的值是lo w,下标数字为3的l被提取出来，下标数字为7的o则没有显示</span>
+</code></pre><h3 id="4-split(_)">4.split( )</h3><p>用于把一个字符串分割成字符串数组，可以取两个值，split(‘x’,y)，x为分割字符串的条件，y为保留数组的长度</p>
+<p>例1:只有x时</p>
+<pre><code>var str = <span class="string">"hello world"</span>;
+console.<span class="keyword">log</span>(str.<span class="keyword">split</span>(<span class="string">"l"</span>))//返回的值是[<span class="string">"he"</span>,<span class="string">""</span>,<span class="string">"o wor"</span>,<span class="string">"d"</span>],此时l为分割的条件，它就不存在了
+</code></pre><p>例2:有x,y时</p>
+<pre><code>var str = <span class="string">"1-2-3-4-5-6"</span>;
+console.<span class="keyword">log</span>(str.<span class="keyword">split</span>(<span class="string">"-"</span>,<span class="number">3</span>))//此时返回的值是[<span class="string">"1"</span>,<span class="string">"2"</span>,<span class="string">"3"</span>]，<span class="keyword">y</span>值为<span class="number">3</span>，只取三个值
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/12/07/JS之字符串操作/" data-id="cihvx4z0o0000smfijo0jscie" class="article-share-link">Share</a>
+     <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="cihvx4z0o0000smfijo0jscie" data-title="cihvx4z0o0000smfijo0jscie" data-url="http://yoursite.com/2015/12/07/JS之字符串操作/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"dreamdreamstar"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-JS之预解析" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/11/27/JS之预解析/" class="article-date">
@@ -116,9 +197,9 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/27/JS之预解析/" data-id="cihiqzvtg0000kdfi8hvzq2z9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/27/JS之预解析/" data-id="cihvx4z1o0004smfik6baj246" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cihiqzvtg0000kdfi8hvzq2z9" data-title="cihiqzvtg0000kdfi8hvzq2z9" data-url="http://yoursite.com/2015/11/27/JS之预解析/"></div>
+  <div class="ds-thread" data-thread-key="cihvx4z1o0004smfik6baj246" data-title="cihvx4z1o0004smfik6baj246" data-url="http://yoursite.com/2015/11/27/JS之预解析/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -174,9 +255,9 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/26/漫漫JS路/" data-id="cihiqzvtn0001kdfi4d5rjnig" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/26/漫漫JS路/" data-id="cihvx4z190001smfiicni0kej" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cihiqzvtn0001kdfi4d5rjnig" data-title="cihiqzvtn0001kdfi4d5rjnig" data-url="http://yoursite.com/2015/11/26/漫漫JS路/"></div>
+  <div class="ds-thread" data-thread-key="cihvx4z190001smfiicni0kej" data-title="cihvx4z190001smfiicni0kej" data-url="http://yoursite.com/2015/11/26/漫漫JS路/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -232,9 +313,9 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/25/小菜鸟学习html和css2的不平凡之路/" data-id="cihiqzvtz0003kdfi06a9a960" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/25/小菜鸟学习html和css2的不平凡之路/" data-id="cihvx4z1m0003smfimgtl96m9" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cihiqzvtz0003kdfi06a9a960" data-title="cihiqzvtz0003kdfi06a9a960" data-url="http://yoursite.com/2015/11/25/小菜鸟学习html和css2的不平凡之路/"></div>
+  <div class="ds-thread" data-thread-key="cihvx4z1m0003smfimgtl96m9" data-title="cihvx4z1m0003smfimgtl96m9" data-url="http://yoursite.com/2015/11/25/小菜鸟学习html和css2的不平凡之路/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -286,9 +367,9 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/25/开山巨作/" data-id="cihiqzvty0002kdfiuv289kam" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/25/开山巨作/" data-id="cihvx4z1j0002smfis9461ktv" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cihiqzvty0002kdfiuv289kam" data-title="cihiqzvty0002kdfiuv289kam" data-url="http://yoursite.com/2015/11/25/开山巨作/"></div>
+  <div class="ds-thread" data-thread-key="cihvx4z1j0002smfis9461ktv" data-title="cihvx4z1j0002smfis9461ktv" data-url="http://yoursite.com/2015/11/25/开山巨作/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -327,7 +408,7 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">4</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">4</span></li></ul>
     </div>
   </div>
 
@@ -337,6 +418,10 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2015/12/07/JS之字符串操作/">JS之字符串操作</a>
+          </li>
         
           <li>
             <a href="/2015/11/27/JS之预解析/">JS之预解析</a>
