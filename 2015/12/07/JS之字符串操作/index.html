@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="小褚的梦想星世界">
 <meta property="og:description" content="好久没更新啦，怕自己越来越懒，所以逼自己来更新啦，也不知道有没有人看，不过没关系啦，以后可以回顾回顾☺
 字符串操作1.indexOf( )查找字符,返回字符下标数字,可以取两个值，indexOf（’x’,y）,x是必须的，是需要查找的字符;y是可有可无的，是从第几个开始找,y的初始值为0;如果x查不到则返回-1">
-<meta property="og:updated_time" content="2015-12-07T13:08:05.000Z">
+<meta property="og:updated_time" content="2015-12-08T12:57:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS之字符串操作">
 <meta name="twitter:description" content="好久没更新啦，怕自己越来越懒，所以逼自己来更新啦，也不知道有没有人看，不过没关系啦，以后可以回顾回顾☺
@@ -117,28 +117,32 @@ document.write(<span class="keyword">str</span>.indexOf(<span class="string">'o'
 </code></pre><p>例2:有x,y时</p>
 <pre><code>var <span class="keyword">str</span> = <span class="string">"hello world"</span>;
 document.write(<span class="keyword">str</span>.indexOf(<span class="string">'o'</span>,<span class="number">6</span>))<span class="comment">//此时返回的值是7，从起始位置为6的字母w开始找，找到world里的o，返回下标数字7.</span>
-</code></pre><h3 id="2-lastIndexOf(_)">2.lastIndexOf( )</h3><p>查找最后一个需要查找的字符，返回下标数字，可以取两个值，lastIndexOf(‘x’,y),x是必须的，是需要查找的字符;y是可有可无的，y是查找到第几个结束，y的初始值为0</p>
+</code></pre><hr>
+<h3 id="2-lastIndexOf(_)">2.lastIndexOf( )</h3><p>查找最后一个需要查找的字符，返回下标数字，可以取两个值，lastIndexOf(‘x’,y),x是必须的，是需要查找的字符;y是可有可无的，y是查找到第几个结束，y的初始值为0</p>
 <p>例1:只有x时</p>
 <pre><code>var <span class="keyword">str</span> = <span class="string">"hello world"</span>;
 document.write(<span class="keyword">str</span>.lastIndexOf(<span class="string">'l'</span>))<span class="comment">//此时返回的值是9,最后一个l是world里的l，所以返回9.</span>
 </code></pre><p>例2:有x,y时</p>
 <pre><code>var <span class="keyword">str</span> = <span class="string">"hello world"</span>;
 document.write(<span class="keyword">str</span>.lastIndexOf(<span class="string">'l'</span>,<span class="number">4</span>))<span class="comment">//此时返回的值是3，因为y值为4，选中的字符串就为hello,在hello中最后一个l的下标数字就为3.</span>
-</code></pre><h3 id="3-slice(_)">3.slice( )</h3><p>提取字符串的某个部分，并以新的字符串返回，可以取两个值，slice(x,y),x值为起始位置，y为结束位置，x位置的值被提取，y位置的值不被提取</p>
+</code></pre><hr>
+<h3 id="3-slice(_)">3.slice( )</h3><p>提取字符串的某个部分，并以新的字符串返回，可以取两个值，slice(x,y),x值为起始位置，y为结束位置，x位置的值被提取，y位置的值不被提取</p>
 <p>例1:只有x时</p>
 <pre><code>var <span class="keyword">str</span> = <span class="string">"hello world"</span>;
 document.write(<span class="keyword">str</span>.slice(<span class="number">4</span>))<span class="comment">//返回的值是o world,下标数字为4的o被提取出来了</span>
 </code></pre><p>例2:有x,y时</p>
 <pre><code>var <span class="keyword">str</span> = <span class="string">"hello world"</span>;
 document.write(<span class="keyword">str</span>.slice(<span class="number">3</span>,<span class="number">7</span>))<span class="comment">//返回的值是lo w,下标数字为3的l被提取出来，下标数字为7的o则没有显示</span>
-</code></pre><h3 id="4-split(_)">4.split( )</h3><p>用于把一个字符串分割成字符串数组，可以取两个值，split(‘x’,y)，x为分割字符串的条件，y为保留数组的长度;如果y的值超过字符串的长度，则无效</p>
+</code></pre><hr>
+<h3 id="4-split(_)">4.split( )</h3><p>用于把一个字符串分割成字符串数组，可以取两个值，split(‘x’,y)，x为分割字符串的条件，y为保留数组的长度;如果y的值超过字符串的长度，则无效</p>
 <p>例1:只有x时</p>
 <pre><code>var str = <span class="string">"hello world"</span>;
 console.<span class="keyword">log</span>(str.<span class="keyword">split</span>(<span class="string">"l"</span>))//返回的值是[<span class="string">"he"</span>,<span class="string">""</span>,<span class="string">"o wor"</span>,<span class="string">"d"</span>],此时l为分割的条件，它就不存在了
 </code></pre><p>例2:有x,y时</p>
 <pre><code>var str = <span class="string">"1-2-3-4-5-6"</span>;
 console.<span class="keyword">log</span>(str.<span class="keyword">split</span>(<span class="string">"-"</span>,<span class="number">3</span>))//此时返回的值是[<span class="string">"1"</span>,<span class="string">"2"</span>,<span class="string">"3"</span>]，<span class="keyword">y</span>值为<span class="number">3</span>，只取三个值
-</code></pre><h3 id="5-substring(_)">5.substring( )</h3><p>提取相应区间的字符，可以取两个值，substring(x,y)，x为起始位置，y为结束位置，x可以被取出，y则不可以</p>
+</code></pre><hr>
+<h3 id="5-substring(_)">5.substring( )</h3><p>提取相应区间的字符，可以取两个值，substring(x,y)，x为起始位置，y为结束位置，x可以被取出，y则不可以</p>
 <p><strong>注意注意:substring是小写哦，千万别写成驼峰式</strong></p>
 <p>例1:只有x时</p>
 <pre><code>var <span class="built_in">str</span> = <span class="string">"1-2-3-4-5-6"</span>;
@@ -146,32 +150,37 @@ console.<span class="built_in">log</span>(<span class="built_in">str</span>.subs
 </code></pre><p>例2:有x,y时</p>
 <pre><code>var str = <span class="string">"1-2-3-4-5-6"</span>;
 console.<span class="built_in">log</span>(str.substring(<span class="number">3</span>,<span class="number">6</span>))<span class="comment">//此时返回的值是-3-，x为3时的-被提取了，y为6时的4则没被提取</span>
-</code></pre><h3 id="6-charCodeAt(_)">6.charCodeAt( )</h3><p>只返回true或者false，比较指定下标位置的字符的unicode码，charCodeAt(x)</p>
+</code></pre><hr>
+<h3 id="6-charCodeAt(_)">6.charCodeAt( )</h3><p>只返回true或者false，比较指定下标位置的字符的unicode码，charCodeAt(x)</p>
 <p>例1:</p>
 <pre><code>console.<span class="function"><span class="title">log</span><span class="params">(<span class="string">'abc'</span>&gt;<span class="string">'aaa'</span>)</span></span><span class="comment">//返回true</span>
 console.<span class="function"><span class="title">log</span><span class="params">(<span class="string">'abc'</span>.charCodeAt(<span class="number">0</span>)</span></span>)<span class="comment">//a:97</span>
 console.<span class="function"><span class="title">log</span><span class="params">(<span class="string">'abc'</span>.charCodeAt(<span class="number">1</span>)</span></span>)<span class="comment">//b:98</span>
 console.<span class="function"><span class="title">log</span><span class="params">(<span class="string">'abc'</span>.charCodeAt(<span class="number">2</span>)</span></span>)<span class="comment">//c:99</span>
-</code></pre><h3 id="7-charAt(_)">7.charAt( )</h3><p>返回指定位置的字符，就一个参数，charAt(x)</p>
+</code></pre><hr>
+<h3 id="7-charAt(_)">7.charAt( )</h3><p>返回指定位置的字符，就一个参数，charAt(x)</p>
 <p>例1:</p>
 <pre><code>var <span class="built_in">str</span> = <span class="string">"hello world"</span>;
 console.<span class="built_in">log</span>(<span class="built_in">str</span>.charAt(<span class="number">1</span>))<span class="comment">//此时返回的值是e</span>
-</code></pre><h3 id="8-toUpperCase(_)">8.toUpperCase( )</h3><p>把字符串转化为大写</p>
+</code></pre><hr>
+<h3 id="8-toUpperCase(_)">8.toUpperCase( )</h3><p>把字符串转化为大写</p>
 <p>例1:</p>
 <pre><code>var <span class="built_in">str</span> = <span class="string">"hello world"</span>;
 console.<span class="built_in">log</span>(<span class="built_in">str</span>.toUpperCase())<span class="comment">//此时返回的值是HELLO WORLD</span>
-</code></pre><h3 id="9-toLowerCase(_)">9.toLowerCase( )</h3><p>把字符串转化为小写</p>
+</code></pre><hr>
+<h3 id="9-toLowerCase(_)">9.toLowerCase( )</h3><p>把字符串转化为小写</p>
 <p>例1:</p>
 <pre><code>var <span class="built_in">str</span> = <span class="string">"HELLO WORLD"</span>;
 console.<span class="built_in">log</span>(<span class="built_in">str</span>.toLowerCase())<span class="comment">//此时返回的值是hello world</span>
-</code></pre><h3 id="10-trim(_)">10.trim( )</h3><p>去掉字符串首尾的空格</p>
+</code></pre><hr>
+<h3 id="10-trim(_)">10.trim( )</h3><p>去掉字符串首尾的空格</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/07/JS之字符串操作/" data-id="cihxdzjum0000upfiwbvr1pe9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/07/JS之字符串操作/" data-id="cihxe6pl00000vkfiq79usxs9" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cihxdzjum0000upfiwbvr1pe9" data-title="cihxdzjum0000upfiwbvr1pe9" data-url="http://yoursite.com/2015/12/07/JS之字符串操作/"></div>
+  <div class="ds-thread" data-thread-key="cihxe6pl00000vkfiq79usxs9" data-title="cihxe6pl00000vkfiq79usxs9" data-url="http://yoursite.com/2015/12/07/JS之字符串操作/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
