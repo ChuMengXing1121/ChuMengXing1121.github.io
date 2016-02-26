@@ -3,36 +3,44 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Html知识点回顾～噔噔噔 | 小褚的梦想星世界</title>
+  <title>css知识点回顾 | 小褚的梦想星世界</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="HTML之疑难杂症解决篇☺
-1.meta标签
-优先使用IE最新版本和Chrome
-&amp;lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;/&amp;gt;
-
-浏览器内核控制。国内浏览器很多都是内双核（webkit和Trident）,webkit内核高速浏览，IE内核兼容网页和旧版网站。使用meta标签可以选择内核
-&amp;lt;meta">
+  <meta name="description" content="一、CSS引入方式1.内联引入：在head中写入代码。
+&amp;lt;style&amp;gt;
+    div{
+        color:red;
+    }
+&amp;lt;/style&amp;gt;
+2.行间样式引入：在body中写入代码。
+&amp;lt;div style=&quot;color:red;&quot;&amp;gt;...&amp;lt;/div&amp;gt;
+3.外部引入：使用link标签引入。4.@import url(reset.css)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Html知识点回顾～噔噔噔">
-<meta property="og:url" content="http://yoursite.com/2016/02/25/Html知识点回顾～噔噔噔/index.html">
+<meta property="og:title" content="css知识点回顾">
+<meta property="og:url" content="http://yoursite.com/2016/02/26/css知识点回顾/index.html">
 <meta property="og:site_name" content="小褚的梦想星世界">
-<meta property="og:description" content="HTML之疑难杂症解决篇☺
-1.meta标签
-优先使用IE最新版本和Chrome
-&amp;lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;/&amp;gt;
-
-浏览器内核控制。国内浏览器很多都是内双核（webkit和Trident）,webkit内核高速浏览，IE内核兼容网页和旧版网站。使用meta标签可以选择内核
-&amp;lt;meta">
-<meta property="og:updated_time" content="2016-02-25T13:07:45.000Z">
+<meta property="og:description" content="一、CSS引入方式1.内联引入：在head中写入代码。
+&amp;lt;style&amp;gt;
+    div{
+        color:red;
+    }
+&amp;lt;/style&amp;gt;
+2.行间样式引入：在body中写入代码。
+&amp;lt;div style=&quot;color:red;&quot;&amp;gt;...&amp;lt;/div&amp;gt;
+3.外部引入：使用link标签引入。4.@import url(reset.css)">
+<meta property="og:image" content="http://images.cnblogs.com/cnblogs_com/rainman/139529/o_line_height.png">
+<meta property="og:image" content="http://images.cnblogs.com/cnblogs_com/rainman/139529/o_text_018.gif">
+<meta property="og:updated_time" content="2016-02-26T13:55:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Html知识点回顾～噔噔噔">
-<meta name="twitter:description" content="HTML之疑难杂症解决篇☺
-1.meta标签
-优先使用IE最新版本和Chrome
-&amp;lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;/&amp;gt;
-
-浏览器内核控制。国内浏览器很多都是内双核（webkit和Trident）,webkit内核高速浏览，IE内核兼容网页和旧版网站。使用meta标签可以选择内核
-&amp;lt;meta">
+<meta name="twitter:title" content="css知识点回顾">
+<meta name="twitter:description" content="一、CSS引入方式1.内联引入：在head中写入代码。
+&amp;lt;style&amp;gt;
+    div{
+        color:red;
+    }
+&amp;lt;/style&amp;gt;
+2.行间样式引入：在body中写入代码。
+&amp;lt;div style=&quot;color:red;&quot;&amp;gt;...&amp;lt;/div&amp;gt;
+3.外部引入：使用link标签引入。4.@import url(reset.css)">
 <meta name="twitter:creator" content="@coolwuxing">
   
     <link rel="alternative" href="/atom.xml" title="小褚的梦想星世界" type="application/atom+xml">
@@ -101,10 +109,10 @@ ga('send', 'pageview');
   </div>
 </div>
       <div class="outer">
-        <section id="main"><article id="post-Html知识点回顾～噔噔噔" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-css知识点回顾" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/02/25/Html知识点回顾～噔噔噔/" class="article-date">
-  <time datetime="2016-02-25T07:44:44.000Z" itemprop="datePublished">2016-02-25</time>
+    <a href="/2016/02/26/css知识点回顾/" class="article-date">
+  <time datetime="2016-02-26T12:30:40.000Z" itemprop="datePublished">2016-02-26</time>
 </a>
     
   </div>
@@ -115,7 +123,7 @@ ga('send', 'pageview');
         
   
     <h1 class="article-title" itemprop="name">
-      Html知识点回顾～噔噔噔
+      css知识点回顾
     </h1>
   
 
@@ -123,54 +131,82 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>HTML之疑难杂症解决篇☺</p>
-<h2 id="1-meta标签">1.meta标签</h2><ul>
-<li><p>优先使用IE最新版本和Chrome</p>
-<pre><code><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">http-equiv</span>=<span class="value">"X-UA-Compatible"</span> <span class="attribute">content</span>=<span class="value">"IE=edge,chrome=1"</span>/&gt;</span>
-</code></pre></li>
-<li><p>浏览器内核控制。国内浏览器很多都是内双核（webkit和Trident）,webkit内核高速浏览，IE内核兼容网页和旧版网站。使用meta标签可以选择内核</p>
-<pre><code>&lt;meta <span class="property">name</span>=<span class="string">"renderer"</span> content=<span class="string">"webkit|ie-comp|ie-stand"</span>/&gt;
-</code></pre></li>
-</ul>
-<p><strong>IE内核（兼容模式）:搜狗告诉浏览器，QQ浏览器</strong><br><strong>webkit内核（极速模式）:360极速浏览器，遨游浏览器</strong></p>
-<a id="more"></a>
-<h2 id="2-q标签/blockquote标签">2.q标签/blockquote标签</h2><p>这是这次回顾中新学到的两个标签。</p>
+        <h2 id="一、CSS引入方式">一、CSS引入方式</h2><p>1.内联引入：在head中写入代码。</p>
+<pre><code><span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css">
+    <span class="tag">div</span><span class="rules">{
+        <span class="rule"><span class="attribute">color</span>:<span class="value">red</span></span>;
+    }</span>
+</span><span class="tag">&lt;/<span class="title">style</span>&gt;</span>
+</code></pre><p>2.行间样式引入：在body中写入代码。</p>
+<pre><code>&lt;<span class="keyword">div</span> style=<span class="string">"color:red;"</span>&gt;...&lt;/<span class="keyword">div</span>&gt;
+</code></pre><p>3.外部引入：使用link标签引入。<br>4.@import url(reset.css).使用@import会增加页面的总体加载时间。IE中使用@import会改变文件的加载顺序。这可能会增加CSS文件的加载时间，阻碍页面渲染。</p>
+<p><strong>有冲突的样式，行间引入方式高于其他引入方式</strong></p>
+<h2 id="二、选择器">二、选择器</h2><p>1.id选择器 ＃id</p>
+<p>2.class选择器 .class</p>
+<p>3.标签选择器 tag</p>
+<p>4.通配选择器 *</p>
+<p>5.层级选择器 div span div&gt;span</p>
+<pre><code><span class="tag">div</span> <span class="tag">span</span> 选中所有子子孙孙名为span的元素
+div&gt;<span class="tag">span</span> 选中的为子元素，子孙元素不会被选
+</code></pre><p>6.分组选择器 </p>
 <ul>
-<li>q标签:短文本引用，样式为给一段文字加了双引号。</li>
-<li>blockquote:长文本引用。</li>
+<li>优先级 id&gt;类选择器&gt;标签选择器》通配选择器</li>
 </ul>
-<h2 id="3-code标签/pre标签">3.code标签/pre标签</h2><ul>
-<li>code标签:在网页中显示计算机专业的编程代码，并且代码为一行时。</li>
-<li>pre标签:插入多行代码。</li>
-</ul>
-<h2 id="4-列表">4.列表</h2><p>注意注意:以无序列表举例，ul为列表，li为列表项，必须成套使用。</p>
+<p>通配选择器慎用，id选择器少用。!important 为某些样式设置最高权值</p>
+<h2 id="三、颜色值">三、颜色值</h2><p>1.关键词:</p>
+<p>就是一些颜色英文单词，有17种合法命名颜色：aqua fuchsia lime olive red white black gray maroon orange silver yellow blue green navy purple teal </p>
+<p>2.16进制:</p>
+<p>16进制是设置颜色值的常用方式，将三个介于00-FF的十六进制数连接起来，若16进制的3组数各自成对，则可简写为3位</p>
+<p>3.rgb:</p>
+<p>red green blue组合而成，取值介于0～255.</p>
+<p>4.rgba(IE8-浏览器不支持):</p>
+<p>多了一个a，a就是alpha透明度，取值范围为0-1.0代表完全透明，1代表完全不透明</p>
+<p>5.hsl(IE8-浏览器不支持):</p>
+<p>通过对色调(H)、饱和度(S)、亮度(L)三个颜色通道的变化以及它们相互的叠加得到各式各样的颜色。HSL标准几乎可以包括人类视力所能感知的所有颜色.</p>
+<p>6.hsla (IE8-浏览器不支持):</p>
+<p>和rgba一样，多加了一个透明度</p>
+<h2 id="四、单位">四、单位</h2><p>1.px 具体单位，具体到像素</p>
+<p>2.百分比 根据父级</p>
+<p>3.em 是父级的倍数</p>
+<p>4.rem 基于根元素html进行设置 r=root</p>
+<h2 id="五、基线、底线、顶线、行距、行高">五、基线、底线、顶线、行距、行高</h2><p><img src="http://images.cnblogs.com/cnblogs_com/rainman/139529/o_line_height.png"><br>行高指的是文本行的基线间的距离。<br>基线并不是汉字的下端沿，而是英文字母”x”的下端沿</p>
+<p>行距，行高<br><img src="http://images.cnblogs.com/cnblogs_com/rainman/139529/o_text_018.gif"></p>
+<h2 id="六、font字体">六、font字体</h2><p>font的复合写法：font-weight或者font-style font-size/line-height font-family</p>
 <ul>
-<li>caption 表格标题</li>
-<li>summary属性 表格的摘要</li>
+<li>font-weight:blod/normal 是否加粗</li>
+<li>font-style:italic/normal 是否斜体</li>
+<li>font-size:字体大小 inherit是否继承父级字体大小</li>
+<li>line-height:行高</li>
+<li>font-family:”黑体”，“微软雅黑”，Arial 设置字体类型</li>
 </ul>
-<h2 id="5-表单">5.表单</h2><ul>
-<li>input输入框 当type=”password”时, 输入框为密码输入框。name 为文本框命名，以备后台程序ASP 、PHP使用。value 为文本输入框设置默认值。(一般起到提示作用)</li>
-<li>radio单选框。<br>  <em>注意注意:同一组的单选按钮，name取值一定要一致，这样同一组的单选按钮才可以起到单选的作用</em></li>
-<li><p>label标签</p>
-<p>  例子:</p>
-<pre><code>&lt;<span class="keyword">label</span> <span class="keyword">for</span>=<span class="string">"haha"</span>&gt;用户名&lt;/<span class="keyword">label</span>&gt;
-&lt;<span class="keyword">input</span> <span class="keyword">type</span>=<span class="string">"text"</span> name=<span class="string">""</span> value=<span class="string">"哈哈"</span> id=<span class="string">"haha"</span>&gt;
-</code></pre><p>当用户选择该标签时，浏览器就会自动将焦点转到和标签相关的表单控件上。for属性可把 label 绑定到另外一个元素。请把 “for” 属性的值设置为相关元素的 id 属性的值</p>
+<h2 id="七、BFC">七、BFC</h2><ul>
+<li><p>FC全称”Formatting Context”, 中文为“格式化上下文”</p>
 </li>
-<li><p>textarea文本域<br>通过css中的resize:none可以去除文本框的变动</p>
+<li><p>BFC全称”Block Formatting Context”, 中文为“块级格式化上下文”</p>
 </li>
-<li><p>select下拉列表框</p>
-<pre><code><span class="tag">&lt;<span class="title">select</span> <span class="attribute">multiple</span>=<span class="value">"multiple"</span>&gt;</span><span class="tag">&lt;/<span class="title">select</span>&gt;</span>
-</code></pre><p>  multiple属性可实现下拉框多选功能</p>
+<li><p>IFC全称”Inline Formatting Context”, 中文为“行级格式化上下文”</p>
+</li>
+</ul>
+<p>1.BFC的生成,满足下列CSS声明之一的元素便会生成BFC。</p>
+<ul>
+<li><p>根元素</p>
+</li>
+<li><p>float的值不为none</p>
+</li>
+<li><p>overflow的值不为visible</p>
+</li>
+<li><p>display的值为inline-block、table-cell、table-caption</p>
+</li>
+<li><p>position的值为absolute或fixed</p>
 </li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/02/25/Html知识点回顾～噔噔噔/" data-id="cil3rhc620000yhfi0ug3fz3i" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/02/26/css知识点回顾/" data-id="cil3rhc6o0004yhfi3d4y4t79" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cil3rhc620000yhfi0ug3fz3i" data-title="cil3rhc620000yhfi0ug3fz3i" data-url="http://yoursite.com/2016/02/25/Html知识点回顾～噔噔噔/"></div>
+  <div class="ds-thread" data-thread-key="cil3rhc6o0004yhfi3d4y4t79" data-title="cil3rhc6o0004yhfi3d4y4t79" data-url="http://yoursite.com/2016/02/26/css知识点回顾/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -193,19 +229,10 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
     
 <nav id="article-nav">
   
-    <a href="/2016/02/26/css知识点回顾/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          css知识点回顾
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/12/08/JS之数组操作/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/02/25/Html知识点回顾～噔噔噔/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">JS之数组操作</div>
+      <div class="article-nav-title">Html知识点回顾～噔噔噔</div>
     </a>
   
 </nav>
@@ -399,7 +426,7 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
 <script>
   var disqus_shortname = 'chumengxing1121.github.io';
   
-  var disqus_url = 'http://yoursite.com/2016/02/25/Html知识点回顾～噔噔噔/';
+  var disqus_url = 'http://yoursite.com/2016/02/26/css知识点回顾/';
   
   (function(){
     var dsq = document.createElement('script');

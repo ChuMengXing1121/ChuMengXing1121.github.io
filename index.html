@@ -84,6 +84,127 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main">
   
+    <article id="post-css知识点回顾" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/02/26/css知识点回顾/" class="article-date">
+  <time datetime="2016-02-26T12:30:40.000Z" itemprop="datePublished">2016-02-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/02/26/css知识点回顾/">css知识点回顾</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、CSS引入方式">一、CSS引入方式</h2><p>1.内联引入：在head中写入代码。</p>
+<pre><code><span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css">
+    <span class="tag">div</span><span class="rules">{
+        <span class="rule"><span class="attribute">color</span>:<span class="value">red</span></span>;
+    }</span>
+</span><span class="tag">&lt;/<span class="title">style</span>&gt;</span>
+</code></pre><p>2.行间样式引入：在body中写入代码。</p>
+<pre><code>&lt;<span class="keyword">div</span> style=<span class="string">"color:red;"</span>&gt;...&lt;/<span class="keyword">div</span>&gt;
+</code></pre><p>3.外部引入：使用link标签引入。<br>4.@import url(reset.css).使用@import会增加页面的总体加载时间。IE中使用@import会改变文件的加载顺序。这可能会增加CSS文件的加载时间，阻碍页面渲染。</p>
+<p><strong>有冲突的样式，行间引入方式高于其他引入方式</strong></p>
+<h2 id="二、选择器">二、选择器</h2><p>1.id选择器 ＃id</p>
+<p>2.class选择器 .class</p>
+<p>3.标签选择器 tag</p>
+<p>4.通配选择器 *</p>
+<p>5.层级选择器 div span div&gt;span</p>
+<pre><code><span class="tag">div</span> <span class="tag">span</span> 选中所有子子孙孙名为span的元素
+div&gt;<span class="tag">span</span> 选中的为子元素，子孙元素不会被选
+</code></pre><p>6.分组选择器 </p>
+<ul>
+<li>优先级 id&gt;类选择器&gt;标签选择器》通配选择器</li>
+</ul>
+<p>通配选择器慎用，id选择器少用。!important 为某些样式设置最高权值</p>
+<h2 id="三、颜色值">三、颜色值</h2><p>1.关键词:</p>
+<p>就是一些颜色英文单词，有17种合法命名颜色：aqua fuchsia lime olive red white black gray maroon orange silver yellow blue green navy purple teal </p>
+<p>2.16进制:</p>
+<p>16进制是设置颜色值的常用方式，将三个介于00-FF的十六进制数连接起来，若16进制的3组数各自成对，则可简写为3位</p>
+<p>3.rgb:</p>
+<p>red green blue组合而成，取值介于0～255.</p>
+<p>4.rgba(IE8-浏览器不支持):</p>
+<p>多了一个a，a就是alpha透明度，取值范围为0-1.0代表完全透明，1代表完全不透明</p>
+<p>5.hsl(IE8-浏览器不支持):</p>
+<p>通过对色调(H)、饱和度(S)、亮度(L)三个颜色通道的变化以及它们相互的叠加得到各式各样的颜色。HSL标准几乎可以包括人类视力所能感知的所有颜色.</p>
+<p>6.hsla (IE8-浏览器不支持):</p>
+<p>和rgba一样，多加了一个透明度</p>
+<h2 id="四、单位">四、单位</h2><p>1.px 具体单位，具体到像素</p>
+<p>2.百分比 根据父级</p>
+<p>3.em 是父级的倍数</p>
+<p>4.rem 基于根元素html进行设置 r=root</p>
+<h2 id="五、基线、底线、顶线、行距、行高">五、基线、底线、顶线、行距、行高</h2><p><img src="http://images.cnblogs.com/cnblogs_com/rainman/139529/o_line_height.png"><br>行高指的是文本行的基线间的距离。<br>基线并不是汉字的下端沿，而是英文字母”x”的下端沿</p>
+<p>行距，行高<br><img src="http://images.cnblogs.com/cnblogs_com/rainman/139529/o_text_018.gif"></p>
+<h2 id="六、font字体">六、font字体</h2><p>font的复合写法：font-weight或者font-style font-size/line-height font-family</p>
+<ul>
+<li>font-weight:blod/normal 是否加粗</li>
+<li>font-style:italic/normal 是否斜体</li>
+<li>font-size:字体大小 inherit是否继承父级字体大小</li>
+<li>line-height:行高</li>
+<li>font-family:”黑体”，“微软雅黑”，Arial 设置字体类型</li>
+</ul>
+<h2 id="七、BFC">七、BFC</h2><ul>
+<li><p>FC全称”Formatting Context”, 中文为“格式化上下文”</p>
+</li>
+<li><p>BFC全称”Block Formatting Context”, 中文为“块级格式化上下文”</p>
+</li>
+<li><p>IFC全称”Inline Formatting Context”, 中文为“行级格式化上下文”</p>
+</li>
+</ul>
+<p>1.BFC的生成,满足下列CSS声明之一的元素便会生成BFC。</p>
+<ul>
+<li><p>根元素</p>
+</li>
+<li><p>float的值不为none</p>
+</li>
+<li><p>overflow的值不为visible</p>
+</li>
+<li><p>display的值为inline-block、table-cell、table-caption</p>
+</li>
+<li><p>position的值为absolute或fixed</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/02/26/css知识点回顾/" data-id="cil3rhc6o0004yhfi3d4y4t79" class="article-share-link">Share</a>
+     <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="cil3rhc6o0004yhfi3d4y4t79" data-title="cil3rhc6o0004yhfi3d4y4t79" data-url="http://yoursite.com/2016/02/26/css知识点回顾/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"dreamdreamstar"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Html知识点回顾～噔噔噔" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/02/25/Html知识点回顾～噔噔噔/" class="article-date">
@@ -124,9 +245,9 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/02/25/Html知识点回顾～噔噔噔/" data-id="cil27izde0000x8fit0bsnvas" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/02/25/Html知识点回顾～噔噔噔/" data-id="cil3rhc620000yhfi0ug3fz3i" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cil27izde0000x8fit0bsnvas" data-title="cil27izde0000x8fit0bsnvas" data-url="http://yoursite.com/2016/02/25/Html知识点回顾～噔噔噔/"></div>
+  <div class="ds-thread" data-thread-key="cil3rhc620000yhfi0ug3fz3i" data-title="cil3rhc620000yhfi0ug3fz3i" data-url="http://yoursite.com/2016/02/25/Html知识点回顾～噔噔噔/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -182,9 +303,9 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/08/JS之数组操作/" data-id="cil27ize80005x8fiv2p8hm7y" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/08/JS之数组操作/" data-id="cil3rhc6r0006yhfilybn0suy" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cil27ize80005x8fiv2p8hm7y" data-title="cil27ize80005x8fiv2p8hm7y" data-url="http://yoursite.com/2015/12/08/JS之数组操作/"></div>
+  <div class="ds-thread" data-thread-key="cil3rhc6r0006yhfilybn0suy" data-title="cil3rhc6r0006yhfilybn0suy" data-url="http://yoursite.com/2015/12/08/JS之数组操作/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -240,9 +361,9 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/07/JS之字符串操作/" data-id="cil27izea0006x8fihc8064hs" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/07/JS之字符串操作/" data-id="cil3rhc6s0007yhfik8bl92oa" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cil27izea0006x8fihc8064hs" data-title="cil27izea0006x8fihc8064hs" data-url="http://yoursite.com/2015/12/07/JS之字符串操作/"></div>
+  <div class="ds-thread" data-thread-key="cil3rhc6s0007yhfik8bl92oa" data-title="cil3rhc6s0007yhfik8bl92oa" data-url="http://yoursite.com/2015/12/07/JS之字符串操作/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -298,9 +419,9 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/27/JS之预解析/" data-id="cil27ize60004x8fif05pnfv0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/27/JS之预解析/" data-id="cil3rhc6p0005yhfihosx1nmx" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cil27ize60004x8fif05pnfv0" data-title="cil27ize60004x8fif05pnfv0" data-url="http://yoursite.com/2015/11/27/JS之预解析/"></div>
+  <div class="ds-thread" data-thread-key="cil3rhc6p0005yhfihosx1nmx" data-title="cil3rhc6p0005yhfihosx1nmx" data-url="http://yoursite.com/2015/11/27/JS之预解析/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -356,9 +477,9 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/26/漫漫JS路/" data-id="cil27izdp0001x8fiu36edu5j" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/26/漫漫JS路/" data-id="cil3rhc6j0001yhfinjfynzx0" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cil27izdp0001x8fiu36edu5j" data-title="cil27izdp0001x8fiu36edu5j" data-url="http://yoursite.com/2015/11/26/漫漫JS路/"></div>
+  <div class="ds-thread" data-thread-key="cil3rhc6j0001yhfinjfynzx0" data-title="cil3rhc6j0001yhfinjfynzx0" data-url="http://yoursite.com/2015/11/26/漫漫JS路/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -414,9 +535,9 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/25/小菜鸟学习html和css2的不平凡之路/" data-id="cil27ize40003x8fi3di9hhfg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/25/小菜鸟学习html和css2的不平凡之路/" data-id="cil3rhc6n0003yhfihf136bpp" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cil27ize40003x8fi3di9hhfg" data-title="cil27ize40003x8fi3di9hhfg" data-url="http://yoursite.com/2015/11/25/小菜鸟学习html和css2的不平凡之路/"></div>
+  <div class="ds-thread" data-thread-key="cil3rhc6n0003yhfihf136bpp" data-title="cil3rhc6n0003yhfihf136bpp" data-url="http://yoursite.com/2015/11/25/小菜鸟学习html和css2的不平凡之路/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -468,9 +589,9 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/25/开山巨作/" data-id="cil27izdz0002x8fiefvsmnpm" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/25/开山巨作/" data-id="cil3rhc6l0002yhfiw98b9nfe" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cil27izdz0002x8fiefvsmnpm" data-title="cil27izdz0002x8fiefvsmnpm" data-url="http://yoursite.com/2015/11/25/开山巨作/"></div>
+  <div class="ds-thread" data-thread-key="cil3rhc6l0002yhfiw98b9nfe" data-title="cil3rhc6l0002yhfiw98b9nfe" data-url="http://yoursite.com/2015/11/25/开山巨作/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -509,7 +630,7 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">4</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">4</span></li></ul>
     </div>
   </div>
 
@@ -519,6 +640,10 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/02/26/css知识点回顾/">css知识点回顾</a>
+          </li>
         
           <li>
             <a href="/2016/02/25/Html知识点回顾～噔噔噔/">Html知识点回顾～噔噔噔</a>
@@ -534,10 +659,6 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
         
           <li>
             <a href="/2015/11/27/JS之预解析/">JS之预解析</a>
-          </li>
-        
-          <li>
-            <a href="/2015/11/26/漫漫JS路/">漫漫JS路</a>
           </li>
         
       </ul>
