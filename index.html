@@ -84,6 +84,84 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main">
   
+    <article id="post-javascript之this" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/03/01/javascript之this/" class="article-date">
+  <time datetime="2016-03-01T12:49:41.000Z" itemprop="datePublished">2016-03-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/01/javascript之this/">javascript之this</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、this">一、this</h2><p>this肯定指向的是一个对象！！！一般在函数里使用this</p>
+<p>1.在全局作用下，调用this，this指向global也就是windows。函数声明，匿名函数，函数表达式在全局中调用this指向window</p>
+<p>2.new关键词构造的对象，this指向创建该对象的对象</p>
+<p>eg:</p>
+<pre><code><span class="keyword">var</span> fn1 = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
+    <span class="keyword">this</span>.x = <span class="number">10</span>;
+    <span class="keyword">this</span>.y = <span class="number">20</span>;
+}
+
+<span class="keyword">var</span> fn2 = <span class="keyword">new</span> fn1();
+</code></pre><p>fn2是从fn1中new出的一个实例，也是对象fn1。this指的是fn1对象而不是fn1函数</p>
+<p>3.this当前的函数为对象属性的时候，this指向该对象</p>
+<p>eg:</p>
+<pre><code>    var obj = {
+        x:<span class="number">10</span>,
+        Y:<span class="number">10</span>,
+        fn1:functon(){
+            <span class="keyword">this</span>.x = <span class="number">20</span>;
+        }
+    }
+obj.fn1();
+</code></pre><p>this指向该对象obj</p>
+        
+          <p class="article-more-link">
+            <a href="/2016/03/01/javascript之this/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/03/01/javascript之this/" data-id="cil9ewarb000489fix09g5mg5" class="article-share-link">Share</a>
+     <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="cil9ewarb000489fix09g5mg5" data-title="cil9ewarb000489fix09g5mg5" data-url="http://yoursite.com/2016/03/01/javascript之this/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"dreamdreamstar"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-css知识点回顾" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/02/26/css知识点回顾/" class="article-date">
@@ -124,9 +202,9 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/02/26/css知识点回顾/" data-id="cil9em8nh00047hfivzb10lwh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/02/26/css知识点回顾/" data-id="cil9eward000589fim49ll58y" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cil9em8nh00047hfivzb10lwh" data-title="cil9em8nh00047hfivzb10lwh" data-url="http://yoursite.com/2016/02/26/css知识点回顾/"></div>
+  <div class="ds-thread" data-thread-key="cil9eward000589fim49ll58y" data-title="cil9eward000589fim49ll58y" data-url="http://yoursite.com/2016/02/26/css知识点回顾/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -190,9 +268,9 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/02/25/Html知识点回顾～噔噔噔/" data-id="cil9em8mw00007hfikv0wads1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/02/25/Html知识点回顾～噔噔噔/" data-id="cil9ewaqq000089fib2hend2l" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cil9em8mw00007hfikv0wads1" data-title="cil9em8mw00007hfikv0wads1" data-url="http://yoursite.com/2016/02/25/Html知识点回顾～噔噔噔/"></div>
+  <div class="ds-thread" data-thread-key="cil9ewaqq000089fib2hend2l" data-title="cil9ewaqq000089fib2hend2l" data-url="http://yoursite.com/2016/02/25/Html知识点回顾～噔噔噔/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -248,9 +326,9 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/08/JS之数组操作/" data-id="cil9em8nk00067hfi5jvkuc47" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/08/JS之数组操作/" data-id="cil9ewarh000789fiw3sgaiwv" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cil9em8nk00067hfi5jvkuc47" data-title="cil9em8nk00067hfi5jvkuc47" data-url="http://yoursite.com/2015/12/08/JS之数组操作/"></div>
+  <div class="ds-thread" data-thread-key="cil9ewarh000789fiw3sgaiwv" data-title="cil9ewarh000789fiw3sgaiwv" data-url="http://yoursite.com/2015/12/08/JS之数组操作/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -306,9 +384,9 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/07/JS之字符串操作/" data-id="cil9em8nm00077hfilhgjkfil" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/07/JS之字符串操作/" data-id="cil9ewarj000889figtl4yfvb" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cil9em8nm00077hfilhgjkfil" data-title="cil9em8nm00077hfilhgjkfil" data-url="http://yoursite.com/2015/12/07/JS之字符串操作/"></div>
+  <div class="ds-thread" data-thread-key="cil9ewarj000889figtl4yfvb" data-title="cil9ewarj000889figtl4yfvb" data-url="http://yoursite.com/2015/12/07/JS之字符串操作/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -364,9 +442,9 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/27/JS之预解析/" data-id="cil9em8nj00057hfispxbw4zx" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/27/JS之预解析/" data-id="cil9eware000689fihe1gia1x" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cil9em8nj00057hfispxbw4zx" data-title="cil9em8nj00057hfispxbw4zx" data-url="http://yoursite.com/2015/11/27/JS之预解析/"></div>
+  <div class="ds-thread" data-thread-key="cil9eware000689fihe1gia1x" data-title="cil9eware000689fihe1gia1x" data-url="http://yoursite.com/2015/11/27/JS之预解析/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -422,9 +500,9 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/26/漫漫JS路/" data-id="cil9em8nc00017hfi4jpwhm5u" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/26/漫漫JS路/" data-id="cil9ewar7000189fi1i4k65jo" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cil9em8nc00017hfi4jpwhm5u" data-title="cil9em8nc00017hfi4jpwhm5u" data-url="http://yoursite.com/2015/11/26/漫漫JS路/"></div>
+  <div class="ds-thread" data-thread-key="cil9ewar7000189fi1i4k65jo" data-title="cil9ewar7000189fi1i4k65jo" data-url="http://yoursite.com/2015/11/26/漫漫JS路/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -480,9 +558,9 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/25/小菜鸟学习html和css2的不平凡之路/" data-id="cil9em8ng00037hfiw9325agx" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/25/小菜鸟学习html和css2的不平凡之路/" data-id="cil9ewara000389fipy5lyfht" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cil9em8ng00037hfiw9325agx" data-title="cil9em8ng00037hfiw9325agx" data-url="http://yoursite.com/2015/11/25/小菜鸟学习html和css2的不平凡之路/"></div>
+  <div class="ds-thread" data-thread-key="cil9ewara000389fipy5lyfht" data-title="cil9ewara000389fipy5lyfht" data-url="http://yoursite.com/2015/11/25/小菜鸟学习html和css2的不平凡之路/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -534,9 +612,9 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/25/开山巨作/" data-id="cil9em8ne00027hfigbu4yfx3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/25/开山巨作/" data-id="cil9ewar9000289fi4vto3pm4" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cil9em8ne00027hfigbu4yfx3" data-title="cil9em8ne00027hfigbu4yfx3" data-url="http://yoursite.com/2015/11/25/开山巨作/"></div>
+  <div class="ds-thread" data-thread-key="cil9ewar9000289fi4vto3pm4" data-title="cil9ewar9000289fi4vto3pm4" data-url="http://yoursite.com/2015/11/25/开山巨作/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -575,7 +653,7 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">4</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">4</span></li></ul>
     </div>
   </div>
 
@@ -585,6 +663,10 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/03/01/javascript之this/">javascript之this</a>
+          </li>
         
           <li>
             <a href="/2016/02/26/css知识点回顾/">css知识点回顾</a>
@@ -600,10 +682,6 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
         
           <li>
             <a href="/2015/12/07/JS之字符串操作/">JS之字符串操作</a>
-          </li>
-        
-          <li>
-            <a href="/2015/11/27/JS之预解析/">JS之预解析</a>
           </li>
         
       </ul>

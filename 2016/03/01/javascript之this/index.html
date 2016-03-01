@@ -3,17 +3,39 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives | 小褚的梦想星世界</title>
+  <title>javascript之this | 小褚的梦想星世界</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="记录学习H5的点点滴滴哦～">
-<meta property="og:type" content="website">
-<meta property="og:title" content="小褚的梦想星世界">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="一、thisthis肯定指向的是一个对象！！！一般在函数里使用this
+1.在全局作用下，调用this，this指向global也就是windows。函数声明，匿名函数，函数表达式在全局中调用this指向window
+2.new关键词构造的对象，this指向创建该对象的对象
+eg:
+var fn1 = function(){
+    this.x = 10;
+    this.y = 20;
+}">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript之this">
+<meta property="og:url" content="http://yoursite.com/2016/03/01/javascript之this/index.html">
 <meta property="og:site_name" content="小褚的梦想星世界">
-<meta property="og:description" content="记录学习H5的点点滴滴哦～">
+<meta property="og:description" content="一、thisthis肯定指向的是一个对象！！！一般在函数里使用this
+1.在全局作用下，调用this，this指向global也就是windows。函数声明，匿名函数，函数表达式在全局中调用this指向window
+2.new关键词构造的对象，this指向创建该对象的对象
+eg:
+var fn1 = function(){
+    this.x = 10;
+    this.y = 20;
+}">
+<meta property="og:updated_time" content="2016-03-01T12:49:55.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小褚的梦想星世界">
-<meta name="twitter:description" content="记录学习H5的点点滴滴哦～">
+<meta name="twitter:title" content="javascript之this">
+<meta name="twitter:description" content="一、thisthis肯定指向的是一个对象！！！一般在函数里使用this
+1.在全局作用下，调用this，this指向global也就是windows。函数声明，匿名函数，函数表达式在全局中调用this指向window
+2.new关键词构造的对象，this指向创建该对象的对象
+eg:
+var fn1 = function(){
+    this.x = 10;
+    this.y = 20;
+}">
 <meta name="twitter:creator" content="@coolwuxing">
   
     <link rel="alternative" href="/atom.xml" title="小褚的梦想星世界" type="application/atom+xml">
@@ -82,201 +104,155 @@ ga('send', 'pageview');
   </div>
 </div>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2016/03/01/javascript之this/" class="archive-article-date">
-  <time datetime="2016-03-01T12:49:41.000Z" itemprop="datePublished">3月 1</time>
+        <section id="main"><article id="post-javascript之this" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/03/01/javascript之this/" class="article-date">
+  <time datetime="2016-03-01T12:49:41.000Z" itemprop="datePublished">2016-03-01</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/03/01/javascript之this/">javascript之this</a>
+    <h1 class="article-title" itemprop="name">
+      javascript之this
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2016/02/26/css知识点回顾/" class="archive-article-date">
-  <time datetime="2016-02-26T12:30:40.000Z" itemprop="datePublished">2月 26</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/02/26/css知识点回顾/">css知识点回顾</a>
-    </h1>
-  
+        <h2 id="一、this">一、this</h2><p>this肯定指向的是一个对象！！！一般在函数里使用this</p>
+<p>1.在全局作用下，调用this，this指向global也就是windows。函数声明，匿名函数，函数表达式在全局中调用this指向window</p>
+<p>2.new关键词构造的对象，this指向创建该对象的对象</p>
+<p>eg:</p>
+<pre><code><span class="keyword">var</span> fn1 = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
+    <span class="keyword">this</span>.x = <span class="number">10</span>;
+    <span class="keyword">this</span>.y = <span class="number">20</span>;
+}
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2016/02/25/Html知识点回顾～噔噔噔/" class="archive-article-date">
-  <time datetime="2016-02-25T07:44:44.000Z" itemprop="datePublished">2月 25</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/02/25/Html知识点回顾～噔噔噔/">Html知识点回顾～噔噔噔</a>
-    </h1>
-  
+<span class="keyword">var</span> fn2 = <span class="keyword">new</span> fn1();
+</code></pre><p>fn2是从fn1中new出的一个实例，也是对象fn1。this指的是fn1对象而不是fn1函数</p>
+<p>3.this当前的函数为对象属性的时候，this指向该对象</p>
+<p>eg:</p>
+<pre><code>    var obj = {
+        x:<span class="number">10</span>,
+        Y:<span class="number">10</span>,
+        fn1:functon(){
+            <span class="keyword">this</span>.x = <span class="number">20</span>;
+        }
+    }
+obj.fn1();
+</code></pre><p>this指向该对象obj</p>
+<a id="more"></a>
+<p>下面是一些关于this的面试题:</p>
+<pre><code>    <span class="keyword">var</span> length = <span class="number">10</span>;
+    function fn() {
+          console.log(this.length);
+    }
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/12/08/JS之数组操作/" class="archive-article-date">
-  <time datetime="2015-12-08T11:23:42.000Z" itemprop="datePublished">12月 8</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/12/08/JS之数组操作/">JS之数组操作</a>
-    </h1>
-  
+    <span class="keyword">var</span> obj = {
+          length: <span class="number">5</span>,
+         <span class="keyword">method</span>: function(fn) {
+              fn();
+               arguments[<span class="number">0</span>]();
+          }
+};
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/12/07/JS之字符串操作/" class="archive-article-date">
-  <time datetime="2015-12-07T11:20:00.000Z" itemprop="datePublished">12月 7</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/12/07/JS之字符串操作/">JS之字符串操作</a>
-    </h1>
-  
+obj.<span class="keyword">method</span>(fn, <span class="number">1</span>);
+</code></pre><p>解析：第一次输出为10，第二次为2，第二次执行相当于arguments调用方法，this指向arguments，这里传了两个参数，所以arguments的长度为2.</p>
+<pre><code><span class="keyword">var</span> foo = {
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/11/27/JS之预解析/" class="archive-article-date">
-  <time datetime="2015-11-27T12:44:06.000Z" itemprop="datePublished">11月 27</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/27/JS之预解析/">JS之预解析</a>
-    </h1>
-  
+       bar: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/11/26/漫漫JS路/" class="archive-article-date">
-  <time datetime="2015-11-26T11:54:28.000Z" itemprop="datePublished">11月 26</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/26/漫漫JS路/">漫漫JS路</a>
-    </h1>
-  
+        <span class="keyword">return</span> <span class="keyword">this</span>.baz;
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/11/25/小菜鸟学习html和css2的不平凡之路/" class="archive-article-date">
-  <time datetime="2015-11-25T12:17:14.000Z" itemprop="datePublished">11月 25</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/25/小菜鸟学习html和css2的不平凡之路/">小菜鸟学习html和css2的不平凡之路</a>
-    </h1>
-  
+        },
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/11/25/开山巨作/" class="archive-article-date">
-  <time datetime="2015-11-25T08:09:02.000Z" itemprop="datePublished">11月 25</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/25/开山巨作/">开山巨作</a>
-    </h1>
-  
+       baz: <span class="number">1</span>
 
-    </header>
+};
+
+(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{
+
+       <span class="keyword">return</span> <span class="keyword">typeof</span> <span class="built_in">arguments</span>[<span class="number">0</span>]();
+
+})(foo.bar);
+</code></pre><p>A. “undefined”</p>
+<p>B. “object”</p>
+<p>C. “number”</p>
+<p>D. “function”</p>
+<p>答案：A</p>
+<p>解析：arguments【foo.bar】(),this指向arguments，return arguments.baz,arguments里只有foo.</p>
+<pre><code><span class="keyword">var</span> foo = {
+
+    bar: <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>{
+
+        <span class="keyword">return</span> <span class="keyword">this</span>.baz;
+
+    },
+
+    baz: <span class="number">1</span>
+
+};
+
+<span class="keyword">typeof</span> (f = foo.bar)();
+</code></pre><p>A. “undefined”</p>
+<p>B. “object”</p>
+<p>C. “number”</p>
+<p>D. “function”</p>
+<p>答案：A</p>
+<p>解析：(f = foo.bar)() ＝ fn()这是函数，this就指向函数，windows里找不到baz,只有foo里有baz.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/03/01/javascript之this/" data-id="cil9ewarb000489fix09g5mg5" class="article-share-link">Share</a>
+     <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="cil9ewarb000489fix09g5mg5" data-title="cil9ewarb000489fix09g5mg5" data-url="http://yoursite.com/2016/03/01/javascript之this/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"dreamdreamstar"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+
+      
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/02/26/css知识点回顾/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">css知识点回顾</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
 </section>
         
           <aside id="sidebar">
@@ -457,11 +433,13 @@ ga('send', 'pageview');
 <script>
   var disqus_shortname = 'chumengxing1121.github.io';
   
+  var disqus_url = 'http://yoursite.com/2016/03/01/javascript之this/';
+  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
