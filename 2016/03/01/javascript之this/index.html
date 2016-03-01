@@ -3,21 +3,39 @@
 <head>
   <meta charset="utf-8">
   
-  <title>开山巨作 | 小褚的梦想星世界</title>
+  <title>javascript之this | 小褚的梦想星世界</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#人生第一篇博客来啦！
-今天是2015.11.25哦，第一篇博客唉，也太开心了吧，好紧张啊，不知道说啥，这个是为了记录我学习H5的点点滴滴而开的哦～希望自己可以坚持很久很久很久…也希望大家会喜欢我的博客。">
+  <meta name="description" content="一、thisthis肯定指向的是一个对象！！！一般在函数里使用this
+1.在全局作用下，调用this，this指向global也就是windows。函数声明，匿名函数，函数表达式在全局中调用this指向window
+2.new关键词构造的对象，this指向创建该对象的对象
+eg:
+var fn1 = function(){
+    this.x = 10;
+    this.y = 20;
+}">
 <meta property="og:type" content="article">
-<meta property="og:title" content="开山巨作">
-<meta property="og:url" content="http://yoursite.com/2015/11/25/开山巨作/index.html">
+<meta property="og:title" content="javascript之this">
+<meta property="og:url" content="http://yoursite.com/2016/03/01/javascript之this/index.html">
 <meta property="og:site_name" content="小褚的梦想星世界">
-<meta property="og:description" content="#人生第一篇博客来啦！
-今天是2015.11.25哦，第一篇博客唉，也太开心了吧，好紧张啊，不知道说啥，这个是为了记录我学习H5的点点滴滴而开的哦～希望自己可以坚持很久很久很久…也希望大家会喜欢我的博客。">
-<meta property="og:updated_time" content="2015-11-26T12:27:44.000Z">
+<meta property="og:description" content="一、thisthis肯定指向的是一个对象！！！一般在函数里使用this
+1.在全局作用下，调用this，this指向global也就是windows。函数声明，匿名函数，函数表达式在全局中调用this指向window
+2.new关键词构造的对象，this指向创建该对象的对象
+eg:
+var fn1 = function(){
+    this.x = 10;
+    this.y = 20;
+}">
+<meta property="og:updated_time" content="2016-03-01T12:14:06.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="开山巨作">
-<meta name="twitter:description" content="#人生第一篇博客来啦！
-今天是2015.11.25哦，第一篇博客唉，也太开心了吧，好紧张啊，不知道说啥，这个是为了记录我学习H5的点点滴滴而开的哦～希望自己可以坚持很久很久很久…也希望大家会喜欢我的博客。">
+<meta name="twitter:title" content="javascript之this">
+<meta name="twitter:description" content="一、thisthis肯定指向的是一个对象！！！一般在函数里使用this
+1.在全局作用下，调用this，this指向global也就是windows。函数声明，匿名函数，函数表达式在全局中调用this指向window
+2.new关键词构造的对象，this指向创建该对象的对象
+eg:
+var fn1 = function(){
+    this.x = 10;
+    this.y = 20;
+}">
 <meta name="twitter:creator" content="@coolwuxing">
   
     <link rel="alternative" href="/atom.xml" title="小褚的梦想星世界" type="application/atom+xml">
@@ -86,10 +104,10 @@ ga('send', 'pageview');
   </div>
 </div>
       <div class="outer">
-        <section id="main"><article id="post-开山巨作" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-javascript之this" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/11/25/开山巨作/" class="article-date">
-  <time datetime="2015-11-25T08:09:02.000Z" itemprop="datePublished">2015-11-25</time>
+    <a href="/2016/03/01/javascript之this/" class="article-date">
+  <time datetime="2016-03-01T12:13:42.000Z" itemprop="datePublished">2016-03-01</time>
 </a>
     
   </div>
@@ -100,7 +118,7 @@ ga('send', 'pageview');
         
   
     <h1 class="article-title" itemprop="name">
-      开山巨作
+      javascript之this
     </h1>
   
 
@@ -108,15 +126,94 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#人生第一篇博客来啦！</p>
-<p>今天是2015.11.25哦，第一篇博客唉，也太开心了吧，好紧张啊，不知道说啥，这个是为了记录我学习H5的点点滴滴而开的哦～希望自己可以坚持很久很久很久…也希望大家会喜欢我的博客。</p>
+        <h2 id="一、this">一、this</h2><p>this肯定指向的是一个对象！！！一般在函数里使用this</p>
+<p>1.在全局作用下，调用this，this指向global也就是windows。函数声明，匿名函数，函数表达式在全局中调用this指向window</p>
+<p>2.new关键词构造的对象，this指向创建该对象的对象</p>
+<p>eg:</p>
+<pre><code><span class="keyword">var</span> fn1 = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
+    <span class="keyword">this</span>.x = <span class="number">10</span>;
+    <span class="keyword">this</span>.y = <span class="number">20</span>;
+}
+
+<span class="keyword">var</span> fn2 = <span class="keyword">new</span> fn1();
+</code></pre><p>fn2是从fn1中new出的一个实例，也是对象fn1。this指的是fn1对象而不是fn1函数</p>
+<p>3.this当前的函数为对象属性的时候，this指向该对象</p>
+<p>eg:</p>
+<pre><code>    var obj = {
+        x:<span class="number">10</span>,
+        Y:<span class="number">10</span>,
+        fn1:functon(){
+            <span class="keyword">this</span>.x = <span class="number">20</span>;
+        }
+    }
+obj.fn1();
+</code></pre><p>this指向该对象obj</p>
+<a id="more"></a>
+<p>下面是一些关于this的面试题:</p>
+<pre><code>    <span class="keyword">var</span> length = <span class="number">10</span>;
+    function fn() {
+          console.log(this.length);
+    }
+
+    <span class="keyword">var</span> obj = {
+          length: <span class="number">5</span>,
+         <span class="keyword">method</span>: function(fn) {
+              fn();
+               arguments[<span class="number">0</span>]();
+          }
+};
+
+obj.<span class="keyword">method</span>(fn, <span class="number">1</span>);
+</code></pre><p>解析：第一次输出为10，第二次为2，第二次执行相当于arguments调用方法，this指向arguments，这里传了两个参数，所以arguments的长度为2.</p>
+<pre><code><span class="keyword">var</span> foo = {
+
+       bar: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{
+
+        <span class="keyword">return</span> <span class="keyword">this</span>.baz;
+
+        },
+
+       baz: <span class="number">1</span>
+
+};
+
+(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{
+
+       <span class="keyword">return</span> <span class="keyword">typeof</span> <span class="built_in">arguments</span>[<span class="number">0</span>]();
+
+})(foo.bar);
+</code></pre><p>A. “undefined”</p>
+<p>B. “object”</p>
+<p>C. “number”</p>
+<p>D. “function”</p>
+<p>答案：A</p>
+<p>解析：arguments【foo.bar】(),this指向arguments，return arguments.baz,arguments里只有foo.</p>
+<pre><code><span class="keyword">var</span> foo = {
+
+    bar: <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>{
+
+        <span class="keyword">return</span> <span class="keyword">this</span>.baz;
+
+    },
+
+    baz: <span class="number">1</span>
+
+};
+
+<span class="keyword">typeof</span> (f = foo.bar)();
+</code></pre><p>A. “undefined”</p>
+<p>B. “object”</p>
+<p>C. “number”</p>
+<p>D. “function”</p>
+<p>答案：A</p>
+<p>解析：(f = foo.bar)() ＝ fn()这是函数，this就指向函数，windows里找不到baz,只有foo里有baz.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/25/开山巨作/" data-id="cil9dywz000023kfiqbpkefbx" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/03/01/javascript之this/" data-id="cil9dywz600043kfiq3mz63gn" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cil9dywz000023kfiqbpkefbx" data-title="cil9dywz000023kfiqbpkefbx" data-url="http://yoursite.com/2015/11/25/开山巨作/"></div>
+  <div class="ds-thread" data-thread-key="cil9dywz600043kfiq3mz63gn" data-title="cil9dywz600043kfiq3mz63gn" data-url="http://yoursite.com/2016/03/01/javascript之this/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -139,15 +236,11 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
     
 <nav id="article-nav">
   
-    <a href="/2015/11/25/小菜鸟学习html和css2的不平凡之路/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          小菜鸟学习html和css2的不平凡之路
-        
-      </div>
-    </a>
   
+    <a href="/2016/02/26/css知识点回顾/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">css知识点回顾</div>
+    </a>
   
 </nav>
 
@@ -340,7 +433,7 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
 <script>
   var disqus_shortname = 'chumengxing1121.github.io';
   
-  var disqus_url = 'http://yoursite.com/2015/11/25/开山巨作/';
+  var disqus_url = 'http://yoursite.com/2016/03/01/javascript之this/';
   
   (function(){
     var dsq = document.createElement('script');
