@@ -128,71 +128,17 @@ ga('send', 'pageview');
     }
 obj.fn1();
 </code></pre><p>this指向该对象obj</p>
-<p>下面是一些关于this的面试题:</p>
-<pre><code>    <span class="keyword">var</span> length = <span class="number">10</span>;
-    function fn() {
-          console.log(this.length);
-    }
-
-    <span class="keyword">var</span> obj = {
-          length: <span class="number">5</span>,
-         <span class="keyword">method</span>: function(fn) {
-              fn();
-               arguments[<span class="number">0</span>]();
-          }
-};
-
-obj.<span class="keyword">method</span>(fn, <span class="number">1</span>);
-</code></pre><p>解析：第一次输出为10，第二次为2，第二次执行相当于arguments调用方法，this指向arguments，这里传了两个参数，所以arguments的长度为2.</p>
-<pre><code><span class="keyword">var</span> foo = {
-
-       bar: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{
-
-        <span class="keyword">return</span> <span class="keyword">this</span>.baz;
-
-        },
-
-       baz: <span class="number">1</span>
-
-};
-
-(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{
-
-       <span class="keyword">return</span> <span class="keyword">typeof</span> <span class="built_in">arguments</span>[<span class="number">0</span>]();
-
-})(foo.bar);
-</code></pre><p>A. “undefined”</p>
-<p>B. “object”</p>
-<p>C. “number”</p>
-<p>D. “function”</p>
-<p>答案：A</p>
-<p>解析：arguments【foo.bar】(),this指向arguments，return arguments.baz,arguments里只有foo.</p>
-<pre><code><span class="keyword">var</span> foo = {
-
-    bar: <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>{
-
-        <span class="keyword">return</span> <span class="keyword">this</span>.baz;
-
-    },
-
-    baz: <span class="number">1</span>
-
-};
-
-<span class="keyword">typeof</span> (f = foo.bar)();
-</code></pre><p>A. “undefined”</p>
-<p>B. “object”</p>
-<p>C. “number”</p>
-<p>D. “function”</p>
-<p>答案：A</p>
-<p>解析：(f = foo.bar)() ＝ fn()这是函数，this就指向函数，windows里找不到baz,只有foo里有baz.</p>
-
+        
+          <p class="article-more-link">
+            <a href="/2016/03/01/javascript之回顾/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/01/javascript之回顾/" data-id="cil9d32r60004z2fioo2z41y6" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/03/01/javascript之回顾/" data-id="cil9d67go0004zyfixdzl4s95" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cil9d32r60004z2fioo2z41y6" data-title="cil9d32r60004z2fioo2z41y6" data-url="http://yoursite.com/2016/03/01/javascript之回顾/"></div>
+  <div class="ds-thread" data-thread-key="cil9d67go0004zyfixdzl4s95" data-title="cil9d67go0004zyfixdzl4s95" data-url="http://yoursite.com/2016/03/01/javascript之回顾/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -248,74 +194,17 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
 <pre><code>&lt;<span class="keyword">div</span> style=<span class="string">"color:red;"</span>&gt;...&lt;/<span class="keyword">div</span>&gt;
 </code></pre><p>3.外部引入：使用link标签引入。<br>4.@import url(reset.css).使用@import会增加页面的总体加载时间。IE中使用@import会改变文件的加载顺序。这可能会增加CSS文件的加载时间，阻碍页面渲染。</p>
 <p><strong>有冲突的样式，行间引入方式高于其他引入方式</strong></p>
-<h2 id="二、选择器">二、选择器</h2><p>1.id选择器 ＃id</p>
-<p>2.class选择器 .class</p>
-<p>3.标签选择器 tag</p>
-<p>4.通配选择器 *</p>
-<p>5.层级选择器 div span div&gt;span</p>
-<pre><code><span class="tag">div</span> <span class="tag">span</span> 选中所有子子孙孙名为span的元素
-div&gt;<span class="tag">span</span> 选中的为子元素，子孙元素不会被选
-</code></pre><p>6.分组选择器 </p>
-<ul>
-<li>优先级 id&gt;类选择器&gt;标签选择器》通配选择器</li>
-</ul>
-<p>通配选择器慎用，id选择器少用。!important 为某些样式设置最高权值</p>
-<h2 id="三、颜色值">三、颜色值</h2><p>1.关键词:</p>
-<p>就是一些颜色英文单词，有17种合法命名颜色：aqua fuchsia lime olive red white black gray maroon orange silver yellow blue green navy purple teal </p>
-<p>2.16进制:</p>
-<p>16进制是设置颜色值的常用方式，将三个介于00-FF的十六进制数连接起来，若16进制的3组数各自成对，则可简写为3位</p>
-<p>3.rgb:</p>
-<p>red green blue组合而成，取值介于0～255.</p>
-<p>4.rgba(IE8-浏览器不支持):</p>
-<p>多了一个a，a就是alpha透明度，取值范围为0-1.0代表完全透明，1代表完全不透明</p>
-<p>5.hsl(IE8-浏览器不支持):</p>
-<p>通过对色调(H)、饱和度(S)、亮度(L)三个颜色通道的变化以及它们相互的叠加得到各式各样的颜色。HSL标准几乎可以包括人类视力所能感知的所有颜色.</p>
-<p>6.hsla (IE8-浏览器不支持):</p>
-<p>和rgba一样，多加了一个透明度</p>
-<h2 id="四、单位">四、单位</h2><p>1.px 具体单位，具体到像素</p>
-<p>2.百分比 根据父级</p>
-<p>3.em 是父级的倍数</p>
-<p>4.rem 基于根元素html进行设置 r=root</p>
-<h2 id="五、基线、底线、顶线、行距、行高">五、基线、底线、顶线、行距、行高</h2><p><img src="http://7xraav.com1.z0.glb.clouddn.com/jixian.jpg" alt="基线,底线,顶线"></p>
-<p>行高指的是文本行的基线间的距离。<br>基线并不是汉字的下端沿，而是英文字母”x”的下端沿</p>
-<p>行距，行高</p>
-<p><img src="http://7xraav.com1.z0.glb.clouddn.com/hanggao.jpg" alt="行距,行高"></p>
-<h2 id="六、font字体">六、font字体</h2><p>font的复合写法：font-weight或者font-style font-size/line-height font-family</p>
-<ul>
-<li>font-weight:blod/normal 是否加粗</li>
-<li>font-style:italic/normal 是否斜体</li>
-<li>font-size:字体大小 inherit是否继承父级字体大小</li>
-<li>line-height:行高</li>
-<li>font-family:”黑体”，“微软雅黑”，Arial 设置字体类型</li>
-</ul>
-<h2 id="七、BFC">七、BFC</h2><ul>
-<li><p>FC全称”Formatting Context”, 中文为“格式化上下文”</p>
-</li>
-<li><p>BFC全称”Block Formatting Context”, 中文为“块级格式化上下文”</p>
-</li>
-<li><p>IFC全称”Inline Formatting Context”, 中文为“行级格式化上下文”</p>
-</li>
-</ul>
-<p>1.BFC的生成,满足下列CSS声明之一的元素便会生成BFC。</p>
-<ul>
-<li><p>根元素</p>
-</li>
-<li><p>float的值不为none</p>
-</li>
-<li><p>overflow的值不为visible</p>
-</li>
-<li><p>display的值为inline-block、table-cell、table-caption</p>
-</li>
-<li><p>position的值为absolute或fixed</p>
-</li>
-</ul>
-
+        
+          <p class="article-more-link">
+            <a href="/2016/02/26/css知识点回顾/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/02/26/css知识点回顾/" data-id="cil9d32r80005z2fijli7sjug" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/02/26/css知识点回顾/" data-id="cil9d67gp0005zyfiijqtlol6" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cil9d32r80005z2fijli7sjug" data-title="cil9d32r80005z2fijli7sjug" data-url="http://yoursite.com/2016/02/26/css知识点回顾/"></div>
+  <div class="ds-thread" data-thread-key="cil9d67gp0005zyfiijqtlol6" data-title="cil9d67gp0005zyfiijqtlol6" data-url="http://yoursite.com/2016/02/26/css知识点回顾/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -379,9 +268,9 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/02/25/Html知识点回顾～噔噔噔/" data-id="cil9d32qk0000z2fieunx8j6f" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/02/25/Html知识点回顾～噔噔噔/" data-id="cil9d67g30000zyfitc70qg0a" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cil9d32qk0000z2fieunx8j6f" data-title="cil9d32qk0000z2fieunx8j6f" data-url="http://yoursite.com/2016/02/25/Html知识点回顾～噔噔噔/"></div>
+  <div class="ds-thread" data-thread-key="cil9d67g30000zyfitc70qg0a" data-title="cil9d67g30000zyfitc70qg0a" data-url="http://yoursite.com/2016/02/25/Html知识点回顾～噔噔噔/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -437,9 +326,9 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/08/JS之数组操作/" data-id="cil9d32rb0007z2fil02pqsa7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/08/JS之数组操作/" data-id="cil9d67gu0007zyfi44zwztnb" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cil9d32rb0007z2fil02pqsa7" data-title="cil9d32rb0007z2fil02pqsa7" data-url="http://yoursite.com/2015/12/08/JS之数组操作/"></div>
+  <div class="ds-thread" data-thread-key="cil9d67gu0007zyfi44zwztnb" data-title="cil9d67gu0007zyfi44zwztnb" data-url="http://yoursite.com/2015/12/08/JS之数组操作/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -495,9 +384,9 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/07/JS之字符串操作/" data-id="cil9d32rd0008z2fi38u6l8fd" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/07/JS之字符串操作/" data-id="cil9d67gw0008zyfifzsijt4l" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cil9d32rd0008z2fi38u6l8fd" data-title="cil9d32rd0008z2fi38u6l8fd" data-url="http://yoursite.com/2015/12/07/JS之字符串操作/"></div>
+  <div class="ds-thread" data-thread-key="cil9d67gw0008zyfifzsijt4l" data-title="cil9d67gw0008zyfifzsijt4l" data-url="http://yoursite.com/2015/12/07/JS之字符串操作/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -553,9 +442,9 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/27/JS之预解析/" data-id="cil9d32ra0006z2fiks45uscy" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/27/JS之预解析/" data-id="cil9d67gr0006zyfiiov3zih6" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cil9d32ra0006z2fiks45uscy" data-title="cil9d32ra0006z2fiks45uscy" data-url="http://yoursite.com/2015/11/27/JS之预解析/"></div>
+  <div class="ds-thread" data-thread-key="cil9d67gr0006zyfiiov3zih6" data-title="cil9d67gr0006zyfiiov3zih6" data-url="http://yoursite.com/2015/11/27/JS之预解析/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -611,9 +500,9 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/26/漫漫JS路/" data-id="cil9d32r10001z2fihmswacwv" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/26/漫漫JS路/" data-id="cil9d67gj0001zyfiky88ulj4" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cil9d32r10001z2fihmswacwv" data-title="cil9d32r10001z2fihmswacwv" data-url="http://yoursite.com/2015/11/26/漫漫JS路/"></div>
+  <div class="ds-thread" data-thread-key="cil9d67gj0001zyfiky88ulj4" data-title="cil9d67gj0001zyfiky88ulj4" data-url="http://yoursite.com/2015/11/26/漫漫JS路/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -669,9 +558,9 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/25/小菜鸟学习html和css2的不平凡之路/" data-id="cil9d32r50003z2fix53zqsoe" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/25/小菜鸟学习html和css2的不平凡之路/" data-id="cil9d67gm0003zyfinttw4h86" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cil9d32r50003z2fix53zqsoe" data-title="cil9d32r50003z2fix53zqsoe" data-url="http://yoursite.com/2015/11/25/小菜鸟学习html和css2的不平凡之路/"></div>
+  <div class="ds-thread" data-thread-key="cil9d67gm0003zyfinttw4h86" data-title="cil9d67gm0003zyfinttw4h86" data-url="http://yoursite.com/2015/11/25/小菜鸟学习html和css2的不平凡之路/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -723,9 +612,9 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/25/开山巨作/" data-id="cil9d32r30002z2fizvifmloa" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/25/开山巨作/" data-id="cil9d67gl0002zyfio3wqiub7" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cil9d32r30002z2fizvifmloa" data-title="cil9d32r30002z2fizvifmloa" data-url="http://yoursite.com/2015/11/25/开山巨作/"></div>
+  <div class="ds-thread" data-thread-key="cil9d67gl0002zyfio3wqiub7" data-title="cil9d67gl0002zyfio3wqiub7" data-url="http://yoursite.com/2015/11/25/开山巨作/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
