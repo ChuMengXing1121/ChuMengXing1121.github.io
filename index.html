@@ -106,13 +106,43 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="数据类型">数据类型</h2>
+        <h2 id="数据类型">数据类型</h2><p>数据类型是为了方便我们知道变量保存的是什么东西的。</p>
+<p>数据类型分为两大类：基本数据类型和对象数据类型</p>
+<ul>
+<li><p>基础数据类型有五种：字符串类型String，数字类型Number，布尔类型Boolean，空类型Null,空类型Undefined</p>
+</li>
+<li><p>对象数据类型：Object对象类型，Array数组，Function函数</p>
+</li>
+</ul>
+<p>1.String </p>
+<p>  ‘ ‘单引号和” “双引号</p>
+<p>  基本类型的特点：基本类型的值是不可变得</p>
+<p>2.Number</p>
+<p>整数:可以通过10进制 8进制 16进制表示</p>
+<p>浮点数:该数值必须包含一个小数点，小数点后面必须有一位数字，如果小数点后只有0，自动转换成整数</p>
+<p>NaN </p>
+<ul>
+<li><p>①、即非数值，是一个特殊的值，这个数值用于表示一个本来要返回数值的操作数，未返回数值的情况。比如任何数值除以0，本是不符合规范的，js里，这样的操作返回NaN（但是实际上，只有0除以0时返回NaN，其他则无穷值）。</p>
+</li>
+<li><p>②、NaN有两个不同寻常的特点：任何涉及NaN的操作都会返回NaN，NaN值与任何值都不相等，包括本身。</p>
+</li>
+<li><p>③、isNaN()函数，这个函数可以判断，传递的参数是否“不是数值”这里涉及数值转换的问题，例如“10”这个字符串就可以转换为10，但是“blue”这个字符串则无法转换为数字，所以isNaN(“blue”)==true</p>
+</li>
+</ul>
+<p>3.Boolean</p>
+<p>该类型有两个值：true false</p>
+<p>4.Undefined</p>
+<p>在使用var声明变量，但未对其加以初始化时，这个变量的类型就是undefined，且其默认初始化值为undefined</p>
+<p>对未声明与初始化的变量，直接使用，那么这个变量的类型也是undefined，但是没有默认初始化值。</p>
+<p>5.Null</p>
+<p>null类型的默认值是null，表示一个空对象指针,如果定义的变量准备在将来用于保存对象,那么就该将该变量初始化为null。</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/01/javascript回顾之数据类型/" data-id="cil9fv9zk0004b1fixx9o9bf3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/03/01/javascript回顾之数据类型/" data-id="cil9h4ug80004cffi99p5i1n6" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cil9fv9zk0004b1fixx9o9bf3" data-title="cil9fv9zk0004b1fixx9o9bf3" data-url="http://yoursite.com/2016/03/01/javascript回顾之数据类型/"></div>
+  <div class="ds-thread" data-thread-key="cil9h4ug80004cffi99p5i1n6" data-title="cil9h4ug80004cffi99p5i1n6" data-url="http://yoursite.com/2016/03/01/javascript回顾之数据类型/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -188,9 +218,9 @@ obj.fn1();
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/01/javascript回顾之this/" data-id="cil9fv9zm0005b1fii1isza3j" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/03/01/javascript回顾之this/" data-id="cil9h4uga0005cffiwlhoip43" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cil9fv9zm0005b1fii1isza3j" data-title="cil9fv9zm0005b1fii1isza3j" data-url="http://yoursite.com/2016/03/01/javascript回顾之this/"></div>
+  <div class="ds-thread" data-thread-key="cil9h4uga0005cffiwlhoip43" data-title="cil9h4uga0005cffiwlhoip43" data-url="http://yoursite.com/2016/03/01/javascript回顾之this/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -254,9 +284,9 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/02/26/css知识点回顾/" data-id="cil9fv9zo0006b1fiqhsvdylg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/02/26/css知识点回顾/" data-id="cil9h4ugc0006cffidd5nzmcv" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cil9fv9zo0006b1fiqhsvdylg" data-title="cil9fv9zo0006b1fiqhsvdylg" data-url="http://yoursite.com/2016/02/26/css知识点回顾/"></div>
+  <div class="ds-thread" data-thread-key="cil9h4ugc0006cffidd5nzmcv" data-title="cil9h4ugc0006cffidd5nzmcv" data-url="http://yoursite.com/2016/02/26/css知识点回顾/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -320,9 +350,9 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/02/25/Html知识点回顾～噔噔噔/" data-id="cil9fv9yt0000b1fi9gz8tdgt" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/02/25/Html知识点回顾～噔噔噔/" data-id="cil9h4ufn0000cffil5r4hsw6" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cil9fv9yt0000b1fi9gz8tdgt" data-title="cil9fv9yt0000b1fi9gz8tdgt" data-url="http://yoursite.com/2016/02/25/Html知识点回顾～噔噔噔/"></div>
+  <div class="ds-thread" data-thread-key="cil9h4ufn0000cffil5r4hsw6" data-title="cil9h4ufn0000cffil5r4hsw6" data-url="http://yoursite.com/2016/02/25/Html知识点回顾～噔噔噔/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -378,9 +408,9 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/08/JS之数组操作/" data-id="cil9fv9zw0008b1fixq6ilpmm" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/08/JS之数组操作/" data-id="cil9h4ugh0008cffi2wp7ktbn" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cil9fv9zw0008b1fixq6ilpmm" data-title="cil9fv9zw0008b1fixq6ilpmm" data-url="http://yoursite.com/2015/12/08/JS之数组操作/"></div>
+  <div class="ds-thread" data-thread-key="cil9h4ugh0008cffi2wp7ktbn" data-title="cil9h4ugh0008cffi2wp7ktbn" data-url="http://yoursite.com/2015/12/08/JS之数组操作/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -436,9 +466,9 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/07/JS之字符串操作/" data-id="cil9fv9zy0009b1fi7scuhgjh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/07/JS之字符串操作/" data-id="cil9h4ugj0009cffifvyd29pw" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cil9fv9zy0009b1fi7scuhgjh" data-title="cil9fv9zy0009b1fi7scuhgjh" data-url="http://yoursite.com/2015/12/07/JS之字符串操作/"></div>
+  <div class="ds-thread" data-thread-key="cil9h4ugj0009cffifvyd29pw" data-title="cil9h4ugj0009cffifvyd29pw" data-url="http://yoursite.com/2015/12/07/JS之字符串操作/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -494,9 +524,9 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/27/JS之预解析/" data-id="cil9fv9zs0007b1fi9w414bea" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/27/JS之预解析/" data-id="cil9h4uge0007cffi9so6ey65" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cil9fv9zs0007b1fi9w414bea" data-title="cil9fv9zs0007b1fi9w414bea" data-url="http://yoursite.com/2015/11/27/JS之预解析/"></div>
+  <div class="ds-thread" data-thread-key="cil9h4uge0007cffi9so6ey65" data-title="cil9h4uge0007cffi9so6ey65" data-url="http://yoursite.com/2015/11/27/JS之预解析/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -552,9 +582,9 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/26/漫漫JS路/" data-id="cil9fv9z30001b1ficjm91pyq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/26/漫漫JS路/" data-id="cil9h4ufv0001cffi4bgrtm6r" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cil9fv9z30001b1ficjm91pyq" data-title="cil9fv9z30001b1ficjm91pyq" data-url="http://yoursite.com/2015/11/26/漫漫JS路/"></div>
+  <div class="ds-thread" data-thread-key="cil9h4ufv0001cffi4bgrtm6r" data-title="cil9h4ufv0001cffi4bgrtm6r" data-url="http://yoursite.com/2015/11/26/漫漫JS路/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -610,9 +640,9 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/25/小菜鸟学习html和css2的不平凡之路/" data-id="cil9fv9zj0003b1fi2oilpsuc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/25/小菜鸟学习html和css2的不平凡之路/" data-id="cil9h4ug70003cffil2jhpfzr" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cil9fv9zj0003b1fi2oilpsuc" data-title="cil9fv9zj0003b1fi2oilpsuc" data-url="http://yoursite.com/2015/11/25/小菜鸟学习html和css2的不平凡之路/"></div>
+  <div class="ds-thread" data-thread-key="cil9h4ug70003cffil2jhpfzr" data-title="cil9h4ug70003cffil2jhpfzr" data-url="http://yoursite.com/2015/11/25/小菜鸟学习html和css2的不平凡之路/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -664,9 +694,9 @@ var duoshuoQuery = {short_name:"dreamdreamstar"};
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/25/开山巨作/" data-id="cil9fv9zi0002b1fi18bijq9g" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/25/开山巨作/" data-id="cil9h4ug50002cffimv9bay0t" class="article-share-link">Share</a>
      <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="cil9fv9zi0002b1fi18bijq9g" data-title="cil9fv9zi0002b1fi18bijq9g" data-url="http://yoursite.com/2015/11/25/开山巨作/"></div>
+  <div class="ds-thread" data-thread-key="cil9h4ug50002cffimv9bay0t" data-title="cil9h4ug50002cffimv9bay0t" data-url="http://yoursite.com/2015/11/25/开山巨作/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
